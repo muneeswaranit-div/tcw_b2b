@@ -1,0 +1,10 @@
+SKU,Product Name,Category,Subcategory,FP Price,Live Stock,GST,HSN Code,Pack Size
+BEL-001,"CW Brass Dome Classic Cycle Bell (Chrome 55mm)",Bicycle Accessories,Bell,260,115,12,83061000,"Box of 10 Pcs"
+LCK-001,"CW Heavy Duty Braided Steel Cable Lock (12mm x 120cm)",Bicycle Accessories,Lock,330,90,18,83014090,"Pack of 5 Pcs"
+MUD-001,"CW Unbreakable Polycarbonate MTB Fender Set (26"" / 27.5"" / 29"")",Bicycle Accessories,Mudguard,290,120,12,87149990,"Set (Front + Rear)"
+RND-001,"CW R&D Universal CNC Derailleur Hanger Saver & Alignment Bracket",Bicycle Accessories,R&D,540,50,18,87149990,"Pack of 5 Kits"
+HUB-001,"CW 36-Hole Sealed Bearing Disc Hub Pair with Quick Release Skewers","Bicycle Wheels, Tyres & Frames",Hub & Spoke Set,750,35,12,87149310,"Pair (100mm F / 135mm R)"
+BEL-003,"CW Kids Dual-Tone Horn & Mini Bell Combo",Bicycle Accessories,Bell,145,60,12,83061000,"Box of 12 Pcs"
+TRI-CGO-001,"CW Heavy-Duty Tricycle Leaf Spring Suspension Kit",Tricycle,Tricycle Frame & Basket,1420,25,12,87149990,"1 Pair Kit"
+BEL-001,"Duplicate SKU Row Test",Bicycle Accessories,Bell,260,50,12,83061000,"Box of 10 Pcs"
+BRK-999,"Invalid Negative Price Row Test",Bicycle Drivetrain & Brakes,Brake Caliper & Disc,-150,20,12,87149400,"1 Kit"

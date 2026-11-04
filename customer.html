@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycle World — Customer / Store Ordering Portal</title>
+  <meta name="description" content="Cycle World B2B Wholesale Ordering Portal for Authorized Partner Stores." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=20261027b" />
+  <script>
+    // Lock this page exclusively to the Customer / Store Portal (Section 10)
+    window.TCW_LOCKED_PORTAL = 'CUSTOMER';
+  </script>
+</head>
+<body>
+  <!-- Root Application Container -->
+  <div id="app-root"></div>
+
+  <!-- Modal Portal Container -->
+  <div id="modal-root"></div>
+
+  <!-- Real-Time Notification Toasts Container -->
+  <div id="toast-container" class="toast-container no-print" aria-live="polite"></div>
+
+  <script src="js/preloaded-db.js?v=20261104linux"></script>
+  <!-- Core Relational Database & RBAC Security Engine -->
+  <script src="js/database-engine.js?v=20261104linux"></script>
+  <script src="js/file-import.js?v=20261104linux"></script>
+  <!-- Portal UI Controller -->
+  <script src="js/app.js?v=20261104linux"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#0F291A"/>
+  </Style>
+  <Style ss:ID="HeaderCore">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#15803D" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#0F291A"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#14532D"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="DataCell">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D5E8DC"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D5E8DC"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Product_Upload">
+  <Table>
+   <Column ss:Width="140"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="280"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="160"/>
+   <Row ss:Height="26">
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Product Category</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Product Subcategory</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Product Name</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Available Quantity</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Product Price</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">GST</Data></Cell>
+    <Cell ss:StyleID="HeaderCore"><Data ss:Type="String">Product Status – Active or Inactive</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Bicycle</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Kids</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World Champ 12T Kids Bicycle (Red)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">3499</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Bicycle</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Kids</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World Champ 16T Kids Bicycle (Blue)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">3999</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Bicycle</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Junior</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World Velocity 24T Junior Geared Bicycle (Black)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">6499</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Bicycle Accessories</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">BELL</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Premium Brass Dome Cycle Bell</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">149</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Bicycle Accessories</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">HELMET</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World AeroPro Cycling Helmet (Matte Black)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">899</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">TRI CYCLES</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Kids</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World JoyRide Deluxe Kids Tricycle (Pink)</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">1899</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">EV-Accessories</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">CHARGER</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Cycle World 36V 2A Smart Lithium Battery Charger</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">1299</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="DataCell"><Data ss:Type="String">Active</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>B2B Engine Test Suite</title>
+  <script src="../js/preloaded-db.js"></script>
+  <script src="../js/database-engine.js"></script>
+  <script src="../js/file-import.js"></script>
+</head>
+<body>
+  <div id="results">Running tests...</div>
+  <script>
+    (function () {
+      const resultsDiv = document.getElementById('results');
+      const logs = [];
+      function log(msg) { logs.push(msg); }
+      function assert(condition, testName) {
+        if (condition) {
+          logs.push('PASS: ' + testName);
+        } else {
+          logs.push('FAIL: ' + testName);
+        }
+      }
+
+      try {
+        const API = window.CycleWorldAPI;
+        const FileImporter = window.CycleWorldFileImporter;
+
+        // 1. Authenticate as Super Admin
+        const loginRes = API.login('CW-ADMIN', 'Admin@123');
+        assert(loginRes && loginRes.user && loginRes.user.role === 'SUPER_ADMIN', 'Super Admin Login Successful');
+
+        const prods = API.getAdminProducts();
+        log('Admin Products loaded: ' + prods.length);
+        assert(prods.length === 453, 'Original 453 Products Intact');
+
+        const firstProd = prods[0];
+        log('First product: ' + firstProd.name + ' in ' + firstProd.categoryName + ' › ' + firstProd.subcategoryName);
+
+        // 2. Test Duplicate Check API
+        const dupCheck = API.checkDuplicateProduct({
+          name: firstProd.name,
+          categoryId: firstProd.categoryId,
+          subcategoryId: firstProd.subcategoryId
+        });
+        assert(dupCheck && dupCheck.id === firstProd.id, 'checkDuplicateProduct identifies existing product');
+
+        // Test Duplicate Check with different case and spaces (Rule 8)
+        const dupCheckFuzzy = API.checkDuplicateProduct({
+          name: '  ' + firstProd.name.toLowerCase() + '   ',
+          categoryId: firstProd.categoryId,
+          subcategoryId: firstProd.subcategoryId
+        });
+        assert(dupCheckFuzzy && dupCheckFuzzy.id === firstProd.id, 'checkDuplicateProduct ignores case and extra spaces (Rule 8)');
+
+        // 3. Test Product Creation with FP Price, without SKU or HSN
+        const uniqueTestName = 'Auto-Generated SKU Test Cycle ' + Date.now();
+        const createdProd = API.saveProduct({
+          name: uniqueTestName,
+          categoryId: firstProd.categoryId,
+          subcategoryId: firstProd.subcategoryId,
+          fpPrice: 2499.50,
+          franchiseQuantity: 42,
+          gstPercentage: 12,
+          status: 'Active'
+        });
+        assert(createdProd && createdProd.skuCode && createdProd.skuCode.startsWith('CW-'), 'New product created without manual SKU; internal CW-... SKU auto-generated');
+        assert(createdProd.name === uniqueTestName, 'Product Name saved correctly');
+        assert(createdProd.fpPrice === 2499.50, 'FP Price saved correctly as 2499.50');
+        assert(createdProd.stock === 42, 'Franchise Quantity saved correctly as 42');
+        assert(createdProd.gstPercentage === 12, 'GST percentage saved correctly as 12%');
+
+        // 4. Test Duplicate Prevention on Product Creation (Rule 3)
+        let dupBlocked = false;
+        try {
+          API.saveProduct({
+            name: uniqueTestName,
+            categoryId: firstProd.categoryId,
+            subcategoryId: firstProd.subcategoryId,
+            fpPrice: 2500,
+            franchiseQuantity: 10,
+            gstPercentage: 12,
+            status: 'Active'
+          });
+        } catch (err) {
+          dupBlocked = (err.code === 'DUPLICATE_PRODUCT');
+        }
+        assert(dupBlocked, 'Creating duplicate product throws DUPLICATE_PRODUCT error automatically (Rule 3)');
+
+        // 5. Test Update Duplicate when permitted (Rule 4)
+        const updatedDup = API.saveProduct({
+          name: uniqueTestName,
+          categoryId: firstProd.categoryId,
+          subcategoryId: firstProd.subcategoryId,
+          fpPrice: 2799,
+          franchiseQuantity: 88,
+          gstPercentage: 18,
+          status: 'Active',
+          allowUpdateDuplicate: true
+        });
+        assert(updatedDup && updatedDup.id === createdProd.id && updatedDup.fpPrice === 2799 && updatedDup.stock === 88 && updatedDup.gstPercentage === 18, 'Update existing product works including FP Price when allowUpdateDuplicate is true (Rule 4)');
+
+        // Clean up test product
+        API.deleteOrDeactivateProduct(createdProd.id, 'delete');
+
+        // 6. Test Bulk Import Validation (Rules 1, 2, 5, 6, 7 & 8)
+        const testRows = [
+          // Row 1: Existing product -> should be update or skipped duplicate
+          {
+            _rowNumber: 2,
+            categoryName: firstProd.categoryName,
+            subcategoryName: firstProd.subcategoryName,
+            productName: firstProd.name,
+            fpPrice: 2999,
+            franchiseQuantity: 99,
+            gst: 12,
+            status: 'Active'
+          },
+          // Row 2: In-file duplicate of Row 1 (Rule 5 & 8)
+          {
+            _rowNumber: 3,
+            categoryName: firstProd.categoryName,
+            subcategoryName: firstProd.subcategoryName,
+            productName: '  ' + firstProd.name.toUpperCase() + '  ',
+            fpPrice: 2999,
+            franchiseQuantity: 50,
+            gst: 12,
+            status: 'Active'
+          },
+          // Row 3: Valid new product
+          {
+            _rowNumber: 4,
+            categoryName: firstProd.categoryName,
+            subcategoryName: firstProd.subcategoryName,
+            productName: 'Brand New Import Bike ' + Date.now(),
+            fpPrice: 4500,
+            franchiseQuantity: 25,
+            gst: 12,
+            status: 'Active'
+          },
+          // Row 4: Invalid row (negative stock)
+          {
+            _rowNumber: 5,
+            categoryName: firstProd.categoryName,
+            subcategoryName: firstProd.subcategoryName,
+            productName: 'Invalid Stock Bike',
+            fpPrice: 1000,
+            franchiseQuantity: -5,
+            gst: 12,
+            status: 'Active'
+          },
+          // Row 5: Invalid row (missing product name)
+          {
+            _rowNumber: 6,
+            categoryName: firstProd.categoryName,
+            subcategoryName: firstProd.subcategoryName,
+            productName: '',
+            fpPrice: 1000,
+            franchiseQuantity: 10,
+            gst: 12,
+            status: 'Active'
+          }
+        ];
+
+        // Mode: UPDATE
+        const valResultUpdate = API.validateBulkImportRows(testRows, { duplicateHandling: 'UPDATE' });
+        assert(valResultUpdate.existingUpdates.length === 1, 'Import: Existing product placed in existingUpdates when mode is UPDATE');
+        assert(valResultUpdate.existingUpdates[0].newFpPrice === 2999, 'Import: Existing product newFpPrice mapped correctly to 2999');
+        assert(valResultUpdate.newProductsToAdd.length === 1, 'Import: Valid new product placed in newProductsToAdd');
+        assert(valResultUpdate.newProductsToAdd[0].fpPrice === 4500, 'Import: New product fpPrice mapped correctly to 4500');
+        assert(valResultUpdate.skippedDuplicates.length === 1, 'Import: In-file duplicate identified and placed in skippedDuplicates (Rule 5)');
+        assert(valResultUpdate.failedRecords.length === 2, 'Import: 2 invalid rows identified and placed in failedRecords');
+
+        // Mode: SKIP
+        const valResultSkip = API.validateBulkImportRows(testRows, { duplicateHandling: 'SKIP' });
+        assert(valResultSkip.existingUpdates.length === 0, 'Import: Existing product NOT updated when mode is SKIP');
+        assert(valResultSkip.skippedDuplicates.length === 2, 'Import: Both existing DB match and in-file duplicate placed in skippedDuplicates (2 total)');
+
+        // 7. Test Error Report CSV Generation
+        const errorList = [
+          ...(valResultUpdate.skippedDuplicates || []),
+          ...(valResultUpdate.failedRecords || [])
+        ];
+        assert(errorList.length === 3, 'Error report has exactly 3 skipped/failed items');
+        assert(errorList[0].resultStatus && errorList[0].reason, 'Error items contain resultStatus and reason (Rule 7)');
+
+        logs.push('ALL VERIFICATION TESTS COMPLETED SUCCESSFULLY!');
+      } catch (e) {
+        logs.push('FATAL ERROR: ' + e.message + '\n' + e.stack);
+      }
+
+      resultsDiv.innerHTML = '<pre>' + logs.join('\n') + '</pre>';
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "cycle-world-tcw-b2b",
+  "version": "1.0.0",
+  "description": "Cycle World B2B Wholesale Bicycle & Tricycle Spare Parts Ordering System (Serving 90+ Partner Stores)",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cycle-world",
+    "b2b",
+    "wholesale",
+    "bicycle-spares",
+    "gst-billing",
+    "rbac"
+  ],
+  "license": "Proprietary"
+}

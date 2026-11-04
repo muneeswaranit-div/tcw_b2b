@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycle World — B2B Wholesale Bicycle Spare Parts &amp; Accessories Portal</title>
+  <meta name="description" content="Cycle World (TCW B2B) Official Wholesale Ordering Portal for Authorized Bicycle & Tricycle Partner Stores." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=20261104linux" />
+  <!-- Optional SheetJS CDN for extended Excel workbook support (gracefully falls back to built-in native parser offline) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+</head>
+<body>
+  <!-- Root Application Container -->
+  <div id="app-root"></div>
+
+  <!-- Modal Portal Container -->
+  <div id="modal-root"></div>
+
+  <!-- Real-Time Notification Toasts Container -->
+  <div id="toast-container" class="toast-container no-print" aria-live="polite"></div>
+
+  <!-- Preloaded Database Snapshot (for Android APK & instant offline startup) -->
+  <script src="js/preloaded-db.js?v=20261104linux"></script>
+  <!-- Core Relational Database & RBAC Security Engine -->
+  <script src="js/database-engine.js?v=20261104linux"></script>
+  <!-- Excel (.xlsx/.xls/.csv) & Structured PDF Importer + Validation Engine -->
+  <script src="js/file-import.js?v=20261104linux"></script>
+  <!-- Portal UI Controller (Super Admin, Billing User, Customer Store) -->
+  <script src="js/app.js?v=20261104linux"></script>
+</body>
+</html>

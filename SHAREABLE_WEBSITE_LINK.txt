@@ -1,0 +1,28 @@
+﻿===================================================================
+CYCLE WORLD B2B â€” SHAREABLE WEBSITE ACCESS LINKS
+===================================================================
+
+1. Customer / Store Login Link (Share this with customers):
+   https://nest-virginia-hanging-racing.trycloudflare.com/customer.html
+
+2. Super Admin Portal Link:
+   https://nest-virginia-hanging-racing.trycloudflare.com/admin.html
+   Default Credentials:
+   - Admin ID: CW-ADMIN
+   - Password:  Admin@123
+
+3. Employee / Billing Portal Link:
+   https://nest-virginia-hanging-racing.trycloudflare.com/billing.html
+   Default Credentials:
+   - Login ID: cw.staff
+   - Password:  Staff@123
+
+4. Main Portal (All Portals Hub):
+   https://nest-virginia-hanging-racing.trycloudflare.com/
+
+===================================================================
+Status: ACTIVE & RUNNING (Independent Background Service)
+Port:   8080 (0.0.0.0:8080)
+Tunnel: Cloudflare Managed IPv4 HTTPS
+Last Health Check: 2026-10-27 23:34:17
+===================================================================

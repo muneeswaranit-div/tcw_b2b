@@ -1,0 +1,7 @@
+Access Links & Super Admin Credentials
+Super Admin Portal: http://localhost:8080/admin.html (or open admin.html)
+Admin / User ID: CW-ADMIN
+Password: Admin@123 (can be changed anytime inside the Super Admin portal)
+Customer / Store Portal: http://localhost:8080/customer.html (or open customer.html)
+Employee / Billing Portal: http://localhost:8080/billing.html (or open billing.html)
+All-Portals Hub: http://localhost:8080/index.html (or open index.html)

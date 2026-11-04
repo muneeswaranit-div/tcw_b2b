@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycle World — Super Admin Portal</title>
+  <meta name="description" content="Cycle World B2B Wholesale Master Control & Super Admin Portal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=20261027b" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+  <script>
+    // Lock this page exclusively to the Super Admin Portal
+    window.TCW_LOCKED_PORTAL = 'SUPER_ADMIN';
+  </script>
+</head>
+<body>
+  <div id="app-root"></div>
+  <div id="modal-root"></div>
+  <div id="toast-container" class="toast-container no-print" aria-live="polite"></div>
+
+  <script src="js/preloaded-db.js?v=20261104linux"></script>
+  <script src="js/database-engine.js?v=20261104linux"></script>
+  <script src="js/file-import.js?v=20261027b"></script>
+  <script src="js/app.js?v=20261104linux"></script>
+</body>
+</html>

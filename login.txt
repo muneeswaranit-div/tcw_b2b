@@ -1,0 +1,24 @@
+﻿Active Website Links & Login Details
+
+(These links will continue to work even after Anti-Gravity is completely closed.)
+
+🔗 Customer / Store Direct Portal
+Link: https://nest-virginia-hanging-racing.trycloudflare.com/customer.html
+Store Login:
+Login ID: ecity@cycleworld.in
+Password: Ecity@123 (Tested & verified in-browser: opens the wholesale catalog and ordering dashboard)
+
+🔗 Employee / Billing Portal
+Link: https://nest-virginia-hanging-racing.trycloudflare.com/billing.html
+Staff Credentials:
+Login ID: cw.staff
+Password: Staff@123 (Tested & verified in-browser: opens the order processing and GST billing dashboard)
+
+🔗 Super Admin Portal
+Link: https://nest-virginia-hanging-racing.trycloudflare.com/admin.html
+Admin Credentials:
+Admin ID: CW-ADMIN
+Password: Admin@123 (Tested & verified in-browser: opens the Master Catalog with the 7 product fields)
+
+🔗 Main Hub (All Portals)
+Link: https://nest-virginia-hanging-racing.trycloudflare.com/
