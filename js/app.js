@@ -3234,6 +3234,7 @@
         packSize: prod.packSize,
         fpPrice: prod.fpPrice,
         gstPercentage: prod.gstPercentage,
+        minimumOrderQuantity: prod.minimumOrderQuantity || 1,
         quantity: qty,
         lineSubtotal: lineSub,
         lineGstAmount: lineGst,
@@ -3643,14 +3644,18 @@
                   ${filtered
                     .map((p) => {
                       const inCartItem = state.cart.find((c) => c.productId === p.id);
-                      const draftQty = state.cardQuantities[p.id] || (inCartItem ? inCartItem.quantity : 1);
+                      
+                      const minimumOrderQuantity = p.minimumOrderQuantity || 1;
+                      const draftQty =
+                        state.cardQuantities[p.id] ||
+                        (inCartItem ? inCartItem.quantity : minimumOrderQuantity);
                       const isAcc = isBicycleAccessoriesCategory(p);
                       return `
                         <article class="product-card">
                           <div class="product-card-img-wrap">
                             <div class="product-card-top-badges">
                               <span class="status-badge status-instock">
-                                <span class="live-dot"></span> In Stock (${p.stock})
+                                <span class="live-dot"></span> In Stock
                               </span>
                             </div>
                             <img src="${p.imageUrl}" alt="${escapeHtml(p.name)}" class="product-card-img" />
@@ -3661,6 +3666,9 @@
                               ${escapeHtml(p.categoryName)} › ${escapeHtml(p.subcategoryName)}
                             </div>
                             <h3 class="product-title">${escapeHtml(p.name)}</h3>
+                            <div style="font-size:0.76rem;color:var(--text-muted);margin-top:0.25rem;">
+                              Minimum order: ${minimumOrderQuantity} ${minimumOrderQuantity === 1 ? 'unit' : 'units'}
+                            </div>
 
                             <div class="product-price-box">
                               <div class="price-row-main">
@@ -3678,7 +3686,7 @@
                                 <button type="button" class="qty-btn" onclick="CycleWorldApp.stepCardQty('${p.id}', -1)">−</button>
                                 <input
                                   type="number"
-                                  min="1"
+                                  min="${minimumOrderQuantity}"
                                   class="qty-input"
                                   id="card-qty-${p.id}"
                                   value="${draftQty}"
@@ -3783,7 +3791,7 @@
                                 <button type="button" class="qty-btn" onclick="CycleWorldApp.updateCartItemQty('${line.productId}', ${line.quantity - 1})">−</button>
                                 <input
                                   type="number"
-                                  min="1"
+                                  min="${line.minimumOrderQuantity || 1}"
                                   class="qty-input"
                                   value="${line.quantity}"
                                   onchange="CycleWorldApp.updateCartItemQty('${line.productId}', this.value)"
@@ -4031,6 +4039,12 @@
           : '';
       const valFpPrice = draft.fpPrice !== undefined ? draft.fpPrice : prod ? prod.fpPrice : '';
       const valStock = draft.stock !== undefined ? draft.stock : prod ? prod.stock : '';
+      const valMinimumOrderQuantity =
+        draft.minimumOrderQuantity !== undefined
+          ? draft.minimumOrderQuantity
+          : prod
+          ? prod.minimumOrderQuantity
+          : 1;
       const valGst =
         draft.gstPercentage !== undefined
           ? draft.gstPercentage
@@ -4181,6 +4195,20 @@
                             <option value="Inactive" ${valStatus === 'Inactive' ? 'selected' : ''}>Inactive</option>
                           </select>
                         </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label">Minimum Order Quantity (MOQ) *</label>
+                        <input
+                          type="number"
+                          step="1"
+                          min="1"
+                          name="minimumOrderQuantity"
+                          class="form-control mono"
+                          value="${valMinimumOrderQuantity}"
+                          placeholder="e.g. 1"
+                          required
+                        />
                       </div>
 
                       <div class="form-group">
@@ -5513,6 +5541,9 @@
         mrp: form.mrp ? form.mrp.value : '',
         fpPrice: form.fpPrice ? form.fpPrice.value : '',
         stock: form.stock ? form.stock.value : '',
+        minimumOrderQuantity: form.minimumOrderQuantity
+          ? form.minimumOrderQuantity.value
+          : '1',
         gstPercentage: form.gstPercentage ? form.gstPercentage.value : '12',
         status: form.status ? form.status.value : 'Active',
         specifications: form.specifications ? form.specifications.value : '',
@@ -5719,6 +5750,9 @@
           subcategoryId: f.subcategoryId.value,
           fpPrice: f.fpPrice ? f.fpPrice.value : undefined,
           stock: f.stock.value,
+          minimumOrderQuantity: f.minimumOrderQuantity
+            ? f.minimumOrderQuantity.value
+            : 1,
           gstPercentage: f.gstPercentage ? f.gstPercentage.value : 12,
           imageUrl: f.imageUrl ? f.imageUrl.value || undefined : undefined,
           status: f.status.value,
@@ -5743,6 +5777,9 @@
                 subcategoryId: f.subcategoryId.value,
                 fpPrice: f.fpPrice ? f.fpPrice.value : dup.fpPrice,
                 stock: f.stock.value,
+                minimumOrderQuantity: f.minimumOrderQuantity
+                  ? f.minimumOrderQuantity.value
+                  : dup.minimumOrderQuantity,
                 gstPercentage: f.gstPercentage ? f.gstPercentage.value : 12,
                 imageUrl: f.imageUrl ? f.imageUrl.value || undefined : undefined,
                 status: f.status.value,

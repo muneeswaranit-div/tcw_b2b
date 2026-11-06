@@ -116,6 +116,7 @@ CREATE TABLE IF NOT EXISTS products (
     category_id VARCHAR(36) NOT NULL,
     subcategory_id VARCHAR(36) NOT NULL,
     name VARCHAR(250) NOT NULL,
+    minimum_order_quantity INTEGER NOT NULL DEFAULT 1 CHECK (minimum_order_quantity >= 1),
     image_url TEXT,
     hsn_code VARCHAR(30),
     pack_size VARCHAR(60) DEFAULT '1 Unit',

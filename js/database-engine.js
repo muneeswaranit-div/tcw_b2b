@@ -375,6 +375,9 @@
   function normalizeDatabaseImages(db) {
     if (!db || !Array.isArray(db.products)) return db;
     db.products.forEach((p) => {
+      if (p && (!Number.isInteger(p.minimumOrderQuantity) || p.minimumOrderQuantity < 1)) {
+        p.minimumOrderQuantity = 1;
+      }
       if (p && typeof p.imageUrl === 'string' && p.imageUrl.startsWith('data:image/svg+xml')) {
         p.imageUrl = '';
       }
@@ -989,6 +992,10 @@
       hsnCode: productRow.hsnCode || gstRow.hsnCode || '',
       packSize: productRow.packSize || '1 Unit',
       specifications: productRow.specifications || '',
+      minimumOrderQuantity:
+        Number.isInteger(productRow.minimumOrderQuantity) && productRow.minimumOrderQuantity >= 1
+          ? productRow.minimumOrderQuantity
+          : 1,
       mrp,
       groupMrp,
       fpPrice,
@@ -2083,6 +2090,7 @@
         hsnCode: p.hsnCode,
         packSize: p.packSize,
         specifications: p.specifications,
+        minimumOrderQuantity: p.minimumOrderQuantity,
         mrp: p.mrp || 0,
         groupMrp: p.groupMrp || 0,
         fpPrice: p.fpPrice,
@@ -2106,6 +2114,10 @@
       }
       const stockRow = dbState.stock.find((s) => s.productId === productId);
       const available = stockRow ? Math.max(0, parseInt(stockRow.quantity, 10) || 0) : 0;
+      const minimumOrderQuantity =
+        Number.isInteger(prod.minimumOrderQuantity) && prod.minimumOrderQuantity > 0
+          ? prod.minimumOrderQuantity
+          : 1;
       if (available <= 0) {
         return {
           allowed: false,
@@ -2113,7 +2125,21 @@
           reason: 'This item is currently out of stock.'
         };
       }
+      if (available < minimumOrderQuantity) {
+        return {
+          allowed: false,
+          approvedQty: 0,
+          reason: `Minimum order quantity is ${minimumOrderQuantity}, but only ${available} units are in stock.`
+        };
+      }
       const req = Math.max(1, parseInt(requestedQty, 10) || 1);
+      if (req < minimumOrderQuantity) {
+        return {
+          allowed: false,
+          approvedQty: minimumOrderQuantity,
+          reason: `Minimum order quantity for this item is ${minimumOrderQuantity} units. Quantity adjusted to the minimum.`
+        };
+      }
       if (req > available) {
         return {
           allowed: false,
@@ -2176,6 +2202,7 @@
         hsnCode,
         packSize,
         specifications,
+        minimumOrderQuantity,
         imageUrl,
         iconType,
         status,
@@ -2229,6 +2256,18 @@
       const numStock = parseInt(rawStock ?? 0, 10);
       if (isNaN(numStock) || numStock < 0) {
         throw new Error('Valid Franchise Quantity (whole number ≥ 0) is required.');
+      }
+
+      const existingProduct = id ? dbState.products.find((p) => p.id === id) : null;
+      const rawMinimumOrderQuantity =
+        minimumOrderQuantity !== undefined && minimumOrderQuantity !== ''
+          ? minimumOrderQuantity
+          : existingProduct
+          ? existingProduct.minimumOrderQuantity || 1
+          : 1;
+      const numMinimumOrderQuantity = Number(rawMinimumOrderQuantity);
+      if (!Number.isInteger(numMinimumOrderQuantity) || numMinimumOrderQuantity < 1) {
+        throw new Error('Minimum Order Quantity must be a whole number greater than or equal to 1.');
       }
 
       // GST %
@@ -2407,6 +2446,20 @@
           });
         }
 
+        if ((prod.minimumOrderQuantity || 1) !== numMinimumOrderQuantity) {
+          recordAuditLog({
+            session,
+            actionType: 'UPDATE_PRODUCT',
+            entityType: 'PRODUCT',
+            entityId: prod.id,
+            skuCode: cleanSku,
+            fieldChanged: 'minimumOrderQuantity',
+            previousValue: String(prod.minimumOrderQuantity || 1),
+            newValue: String(numMinimumOrderQuantity),
+            description: `Updated minimum order quantity for SKU ${cleanSku} from ${prod.minimumOrderQuantity || 1} to ${numMinimumOrderQuantity}.`
+          });
+        }
+
         if (prod.status !== configuredStatus || prod.name !== cleanName) {
           recordAuditLog({
             session,
@@ -2426,6 +2479,7 @@
 
         prod.skuCode = cleanSku;
         prod.name = cleanName;
+        prod.minimumOrderQuantity = numMinimumOrderQuantity;
         prod.categoryId = categoryId;
         prod.subcategoryId = subcategoryId;
         if (variantAttributes !== undefined) {
@@ -2507,6 +2561,7 @@
           variantAttributes: cleanVariants,
           mrp: numMrp,
           name: cleanName,
+          minimumOrderQuantity: numMinimumOrderQuantity,
           imageUrl: finalImg,
           hsnCode: String(hsnCode || '').trim(),
           packSize: String(packSize || '1 Unit').trim(),
@@ -3547,6 +3602,12 @@
         const qty = parseInt(cartItem.quantity, 10);
         if (isNaN(qty) || qty <= 0) {
           throw new Error(`Invalid quantity for SKU ${joined.skuCode}.`);
+        }
+
+        if (qty < joined.minimumOrderQuantity) {
+          throw new Error(
+            `Minimum order quantity for "${joined.name}" (${joined.skuCode}) is ${joined.minimumOrderQuantity} units, but your order requested ${qty}.`
+          );
         }
 
         if (qty > joined.stock) {

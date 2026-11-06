@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": "2.0.0-clean",
     "lastOrderSeq": 100,
-    "updatedAt": "2026-11-04T07:32:36.141Z"
+    "updatedAt": "2026-11-06T06:32:59.343Z"
   },
   "roles": [
     {
@@ -53,7 +53,7 @@
       "roleCode": "SUPER_ADMIN",
       "fullName": "Cycle World Super Admin",
       "status": "Active",
-      "lastLoginAt": "2026-11-04T07:32:19.671Z",
+      "lastLoginAt": "2026-11-06T06:31:35.007Z",
       "createdAt": "2026-10-05T13:47:39.926Z",
       "updatedAt": "2026-10-05T13:47:39.926Z"
     },
@@ -66,7 +66,7 @@
       "roleCode": "CUSTOMER",
       "fullName": "cycle world ecity",
       "status": "Active",
-      "lastLoginAt": "2026-10-27T17:56:35.041Z",
+      "lastLoginAt": "2026-10-27T17:51:45.811Z",
       "createdAt": "2026-10-05T14:52:05.634Z",
       "updatedAt": "2026-10-05T14:52:05.634Z"
     },
@@ -82,6 +82,19 @@
       "lastLoginAt": "2026-10-27T17:51:46.253Z",
       "createdAt": "2026-10-27T18:00:00.000Z",
       "updatedAt": "2026-10-27T18:00:00.000Z"
+    },
+    {
+      "id": "usr-cust-1793946466523-4qr",
+      "userId": "test@mail.com",
+      "email": "test@mail.com",
+      "passwordHash": "sha256$8304942e502cbda49a28d5772b95e75b0a6fbea8c9f16e1a8c4a6953d5633972",
+      "roleId": "role-customer-store",
+      "roleCode": "CUSTOMER",
+      "fullName": "test",
+      "status": "Active",
+      "lastLoginAt": null,
+      "createdAt": "2026-11-06T06:27:46.523Z",
+      "updatedAt": "2026-11-06T06:27:46.523Z"
     }
   ],
   "customers": [
@@ -103,6 +116,25 @@
       "createdBy": "CW-ADMIN",
       "createdAt": "2026-10-05T14:52:05.634Z",
       "updatedAt": "2026-10-05T14:52:05.634Z"
+    },
+    {
+      "id": "cust-1793946466523-4qr",
+      "userId": "usr-cust-1793946466523-4qr",
+      "customerCode": "test@mail.com",
+      "storeName": "test",
+      "contactPerson": "",
+      "email": "test@mail.com",
+      "phone": "9600765378",
+      "storeDetails": "",
+      "address": "madurai",
+      "city": "",
+      "state": "",
+      "pincode": "",
+      "gstNumber": "",
+      "status": "Active",
+      "createdBy": "CW-ADMIN",
+      "createdAt": "2026-11-06T06:27:46.523Z",
+      "updatedAt": "2026-11-06T06:27:46.523Z"
     }
   ],
   "employees": [
@@ -2907,6 +2939,14 @@
       "createdAt": "2026-10-05T16:25:22.821Z"
     },
     {
+      "id": "sku-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "categoryId": "cat-1791208230263-4nd",
+      "subcategoryId": "sub-1791217522981-syk",
+      "createdBy": "CW-ADMIN",
+      "createdAt": "2026-10-05T16:25:23.444Z"
+    },
+    {
       "id": "sku-1791217524086-wzn",
       "skuCode": "SHI-001",
       "categoryId": "cat-1791208230263-4nd",
@@ -4537,7 +4577,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T13:52:40.690Z",
-      "updatedAt": "2026-10-05T14:58:29.458Z"
+      "updatedAt": "2026-10-05T14:58:29.458Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348420-hnb",
@@ -4552,7 +4593,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T14:59:08.420Z",
-      "updatedAt": "2026-10-05T15:02:02.654Z"
+      "updatedAt": "2026-10-05T15:02:02.654Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348433-c6z",
@@ -4567,7 +4609,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.433Z",
-      "updatedAt": "2026-10-05T15:05:04.141Z"
+      "updatedAt": "2026-10-05T15:05:04.141Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348442-zs6",
@@ -4582,7 +4625,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.442Z",
-      "updatedAt": "2026-10-05T15:05:26.941Z"
+      "updatedAt": "2026-10-05T15:05:26.941Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348454-d7x",
@@ -4597,7 +4641,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.454Z",
-      "updatedAt": "2026-10-05T15:07:05.963Z"
+      "updatedAt": "2026-10-05T15:07:05.963Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348467-wcd",
@@ -4612,7 +4657,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.467Z",
-      "updatedAt": "2026-10-05T15:07:22.840Z"
+      "updatedAt": "2026-10-05T15:07:22.840Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348479-285",
@@ -4627,7 +4673,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.479Z",
-      "updatedAt": "2026-10-05T15:10:46.673Z"
+      "updatedAt": "2026-10-05T15:10:46.673Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348492-x4f",
@@ -4642,7 +4689,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.492Z",
-      "updatedAt": "2026-10-05T15:10:56.742Z"
+      "updatedAt": "2026-10-05T15:10:56.742Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348502-xig",
@@ -4657,7 +4705,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T14:59:08.502Z",
-      "updatedAt": "2026-10-05T15:11:16.055Z"
+      "updatedAt": "2026-10-05T15:11:16.055Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348514-msh",
@@ -4672,7 +4721,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.514Z",
-      "updatedAt": "2026-10-05T15:02:18.262Z"
+      "updatedAt": "2026-10-05T15:02:18.262Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348526-v5c",
@@ -4687,7 +4737,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.526Z",
-      "updatedAt": "2026-10-05T15:02:27.810Z"
+      "updatedAt": "2026-10-05T15:02:27.810Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791212348538-vo5",
@@ -4702,7 +4753,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T14:59:08.538Z",
-      "updatedAt": "2026-10-05T15:02:40.625Z"
+      "updatedAt": "2026-10-05T15:02:40.625Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487690-scj",
@@ -4717,7 +4769,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.690Z",
-      "updatedAt": "2026-10-05T17:42:38.525Z"
+      "updatedAt": "2026-10-05T17:42:38.525Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487731-zcz",
@@ -4732,7 +4785,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.731Z",
-      "updatedAt": "2026-10-05T17:42:38.626Z"
+      "updatedAt": "2026-10-05T17:42:38.626Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487773-3zs",
@@ -4747,7 +4801,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.773Z",
-      "updatedAt": "2026-10-05T17:42:38.737Z"
+      "updatedAt": "2026-10-05T17:42:38.737Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487854-ehf",
@@ -4762,7 +4817,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.854Z",
-      "updatedAt": "2026-10-05T17:42:39.079Z"
+      "updatedAt": "2026-10-05T17:42:39.079Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487941-nl3",
@@ -4777,7 +4833,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.941Z",
-      "updatedAt": "2026-10-05T17:42:39.183Z"
+      "updatedAt": "2026-10-05T17:42:39.183Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217487977-xul",
@@ -4792,7 +4849,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:47.977Z",
-      "updatedAt": "2026-10-05T17:42:39.385Z"
+      "updatedAt": "2026-10-05T17:42:39.385Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488015-bt3",
@@ -4807,7 +4865,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.015Z",
-      "updatedAt": "2026-10-05T17:42:39.486Z"
+      "updatedAt": "2026-10-05T17:42:39.486Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488094-vzw",
@@ -4822,7 +4881,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.094Z",
-      "updatedAt": "2026-10-05T17:42:39.597Z"
+      "updatedAt": "2026-10-05T17:42:39.597Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488133-0ju",
@@ -4837,7 +4897,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.133Z",
-      "updatedAt": "2026-10-05T17:42:39.696Z"
+      "updatedAt": "2026-10-05T17:42:39.696Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488172-75g",
@@ -4852,7 +4913,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.172Z",
-      "updatedAt": "2026-10-05T17:42:39.810Z"
+      "updatedAt": "2026-10-05T17:42:39.810Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488210-t32",
@@ -4867,7 +4929,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.210Z",
-      "updatedAt": "2026-10-05T17:42:39.913Z"
+      "updatedAt": "2026-10-05T17:42:39.913Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488248-a6v",
@@ -4882,7 +4945,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.248Z",
-      "updatedAt": "2026-10-05T17:42:40.010Z"
+      "updatedAt": "2026-10-05T17:42:40.010Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488287-x8j",
@@ -4897,7 +4961,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.287Z",
-      "updatedAt": "2026-10-05T17:42:40.108Z"
+      "updatedAt": "2026-10-05T17:42:40.108Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488331-rra",
@@ -4912,7 +4977,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.331Z",
-      "updatedAt": "2026-10-05T17:42:40.210Z"
+      "updatedAt": "2026-10-05T17:42:40.210Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488406-483",
@@ -4927,7 +4993,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.406Z",
-      "updatedAt": "2026-10-06T01:48:57.215Z"
+      "updatedAt": "2026-10-06T01:48:57.215Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488458-tpf",
@@ -4942,7 +5009,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.458Z",
-      "updatedAt": "2026-10-05T17:42:40.435Z"
+      "updatedAt": "2026-10-05T17:42:40.435Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488516-tri",
@@ -4957,7 +5025,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.516Z",
-      "updatedAt": "2026-10-06T01:43:24.364Z"
+      "updatedAt": "2026-10-06T01:43:24.364Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488550-214",
@@ -4972,7 +5041,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.550Z",
-      "updatedAt": "2026-10-05T17:42:40.675Z"
+      "updatedAt": "2026-10-05T17:42:40.675Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488588-5v9",
@@ -4987,7 +5057,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.588Z",
-      "updatedAt": "2026-10-05T17:42:40.863Z"
+      "updatedAt": "2026-10-05T17:42:40.863Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488630-ri3",
@@ -5002,7 +5073,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.630Z",
-      "updatedAt": "2026-10-05T17:42:41.113Z"
+      "updatedAt": "2026-10-05T17:42:41.113Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488675-5x8",
@@ -5017,7 +5089,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.675Z",
-      "updatedAt": "2026-10-05T17:42:41.406Z"
+      "updatedAt": "2026-10-05T17:42:41.406Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488715-0jx",
@@ -5033,7 +5106,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.714Z",
       "updatedAt": "2026-10-06T03:37:23.715Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488753-2jy",
@@ -5048,7 +5122,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.753Z",
-      "updatedAt": "2026-10-06T01:37:18.287Z"
+      "updatedAt": "2026-10-06T01:37:18.287Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488792-6nd",
@@ -5063,7 +5138,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.792Z",
-      "updatedAt": "2026-10-06T01:38:58.555Z"
+      "updatedAt": "2026-10-06T01:38:58.555Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488830-1jj",
@@ -5078,7 +5154,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.830Z",
-      "updatedAt": "2026-10-05T17:42:42.948Z"
+      "updatedAt": "2026-10-05T17:42:42.948Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488873-c33",
@@ -5093,7 +5170,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.873Z",
-      "updatedAt": "2026-10-06T01:41:56.648Z"
+      "updatedAt": "2026-10-06T01:41:56.648Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488908-fe2",
@@ -5108,7 +5186,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.908Z",
-      "updatedAt": "2026-10-05T17:42:44.177Z"
+      "updatedAt": "2026-10-05T17:42:44.177Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217488948-ukl",
@@ -5123,7 +5202,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:48.948Z",
-      "updatedAt": "2026-10-06T01:52:51.680Z"
+      "updatedAt": "2026-10-06T01:52:51.680Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489026-i01",
@@ -5139,7 +5219,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.026Z",
       "updatedAt": "2026-10-06T03:40:29.827Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489062-m9q",
@@ -5155,7 +5236,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.062Z",
       "updatedAt": "2026-10-06T03:41:01.757Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489140-wyl",
@@ -5171,7 +5253,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.140Z",
       "updatedAt": "2026-10-06T03:42:07.103Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489179-zxq",
@@ -5187,7 +5270,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.179Z",
       "updatedAt": "2026-10-06T03:42:35.784Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489215-zx7",
@@ -5203,7 +5287,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.215Z",
       "updatedAt": "2026-10-06T03:44:45.806Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489257-9kr",
@@ -5219,7 +5304,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.257Z",
       "updatedAt": "2026-10-06T03:44:22.623Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489298-l1w",
@@ -5235,7 +5321,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.298Z",
       "updatedAt": "2026-10-06T03:43:44.207Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489393-ey4",
@@ -5251,7 +5338,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.393Z",
       "updatedAt": "2026-10-06T03:45:32.470Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489433-8pw",
@@ -5267,7 +5355,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.433Z",
       "updatedAt": "2026-10-06T03:45:41.544Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489470-n23",
@@ -5283,7 +5372,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.470Z",
       "updatedAt": "2026-10-06T03:49:34.702Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489564-a1s",
@@ -5299,7 +5389,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.564Z",
       "updatedAt": "2026-10-06T04:01:20.174Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489603-mb1",
@@ -5315,7 +5406,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.603Z",
       "updatedAt": "2026-10-06T03:59:39.940Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489646-xmz",
@@ -5331,7 +5423,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.646Z",
       "updatedAt": "2026-10-06T03:59:03.425Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489727-3lr",
@@ -5347,7 +5440,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.727Z",
       "updatedAt": "2026-10-06T04:02:15.267Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489764-z7e",
@@ -5363,7 +5457,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.764Z",
       "updatedAt": "2026-10-06T04:02:53.432Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489805-lp0",
@@ -5379,7 +5474,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.805Z",
       "updatedAt": "2026-10-06T04:03:29.512Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489845-2ln",
@@ -5395,7 +5491,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.845Z",
       "updatedAt": "2026-10-06T04:03:37.827Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489926-y5q",
@@ -5411,7 +5508,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.926Z",
       "updatedAt": "2026-10-06T04:04:47.336Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217489969-mja",
@@ -5427,7 +5525,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:49.969Z",
       "updatedAt": "2026-10-06T04:05:00.687Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490013-nt3",
@@ -5442,7 +5541,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T16:24:50.013Z",
-      "updatedAt": "2026-10-05T17:42:51.788Z"
+      "updatedAt": "2026-10-05T17:42:51.788Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490056-q0m",
@@ -5458,7 +5558,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.056Z",
       "updatedAt": "2026-10-06T04:06:13.444Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490096-e7n",
@@ -5474,7 +5575,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.096Z",
       "updatedAt": "2026-10-06T04:07:41.622Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490141-q39",
@@ -5490,7 +5592,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.141Z",
       "updatedAt": "2026-10-06T04:07:10.555Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490182-agt",
@@ -5506,7 +5609,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.182Z",
       "updatedAt": "2026-10-06T04:06:42.545Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490263-oyv",
@@ -5522,7 +5626,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.263Z",
       "updatedAt": "2026-10-06T04:09:27.578Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490301-c2i",
@@ -5538,7 +5643,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.301Z",
       "updatedAt": "2026-10-06T04:09:39.212Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490339-wg4",
@@ -5553,7 +5659,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.339Z",
-      "updatedAt": "2026-10-05T17:42:54.062Z"
+      "updatedAt": "2026-10-05T17:42:54.062Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490438-bo0",
@@ -5569,7 +5676,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.438Z",
       "updatedAt": "2026-10-06T04:16:53.956Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490486-oun",
@@ -5585,7 +5693,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.486Z",
       "updatedAt": "2026-10-06T04:17:03.532Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490535-fap",
@@ -5601,7 +5710,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.535Z",
       "updatedAt": "2026-10-06T04:17:13.743Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490622-cy5",
@@ -5617,7 +5727,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.622Z",
       "updatedAt": "2026-10-06T04:18:42.336Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490678-1ao",
@@ -5633,7 +5744,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.678Z",
       "updatedAt": "2026-10-06T04:18:49.449Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490759-3cc",
@@ -5649,7 +5761,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.759Z",
       "updatedAt": "2026-10-06T07:35:48.399Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490804-8gn",
@@ -5665,7 +5778,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.804Z",
       "updatedAt": "2026-10-06T07:21:01.512Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490844-eaw",
@@ -5681,7 +5795,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.844Z",
       "updatedAt": "2026-10-06T07:35:56.029Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490886-zdm",
@@ -5697,7 +5812,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.886Z",
       "updatedAt": "2026-10-06T07:21:24.090Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490933-94u",
@@ -5713,7 +5829,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.933Z",
       "updatedAt": "2026-10-06T07:07:40.623Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217490985-pxk",
@@ -5729,7 +5846,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:50.985Z",
       "updatedAt": "2026-10-06T07:21:53.519Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491030-ybz",
@@ -5745,7 +5863,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.030Z",
       "updatedAt": "2026-10-06T07:33:51.464Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491081-mp5",
@@ -5761,7 +5880,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.081Z",
       "updatedAt": "2026-10-06T07:33:22.278Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491125-6oq",
@@ -5777,7 +5897,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.125Z",
       "updatedAt": "2026-10-06T07:33:32.772Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491174-pcw",
@@ -5793,7 +5914,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.174Z",
       "updatedAt": "2026-10-06T06:56:00.047Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491222-a4t",
@@ -5809,7 +5931,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.222Z",
       "updatedAt": "2026-10-06T07:36:37.952Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491265-n9k",
@@ -5825,7 +5948,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.265Z",
       "updatedAt": "2026-10-06T07:34:43.525Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491350-lr3",
@@ -5842,7 +5966,8 @@
       "createdAt": "2026-10-05T16:24:51.350Z",
       "updatedAt": "2026-10-06T07:56:46.670Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491399-v1x",
@@ -5859,7 +5984,8 @@
       "createdAt": "2026-10-05T16:24:51.399Z",
       "updatedAt": "2026-10-06T08:19:14.823Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491531-wws",
@@ -5874,7 +6000,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.531Z",
-      "updatedAt": "2026-10-05T17:43:00.691Z"
+      "updatedAt": "2026-10-05T17:43:00.691Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491631-n4w",
@@ -5889,7 +6016,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.631Z",
-      "updatedAt": "2026-10-05T17:43:01.029Z"
+      "updatedAt": "2026-10-05T17:43:01.029Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491682-tm4",
@@ -5904,7 +6032,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.682Z",
-      "updatedAt": "2026-10-05T17:43:01.313Z"
+      "updatedAt": "2026-10-05T17:43:01.313Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491792-n06",
@@ -5919,7 +6048,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.792Z",
-      "updatedAt": "2026-10-05T17:43:01.565Z"
+      "updatedAt": "2026-10-05T17:43:01.565Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491887-3w4",
@@ -5934,7 +6064,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.887Z",
-      "updatedAt": "2026-10-05T17:43:01.825Z"
+      "updatedAt": "2026-10-05T17:43:01.825Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491943-fns",
@@ -5949,7 +6080,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.943Z",
-      "updatedAt": "2026-10-05T17:43:02.335Z"
+      "updatedAt": "2026-10-05T17:43:02.335Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217491995-hib",
@@ -5964,7 +6096,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:51.995Z",
-      "updatedAt": "2026-10-05T17:43:02.596Z"
+      "updatedAt": "2026-10-05T17:43:02.596Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492102-iy9",
@@ -5979,7 +6112,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.102Z",
-      "updatedAt": "2026-10-05T17:43:02.871Z"
+      "updatedAt": "2026-10-05T17:43:02.871Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492204-ceg",
@@ -5994,7 +6128,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.204Z",
-      "updatedAt": "2026-10-05T17:43:03.143Z"
+      "updatedAt": "2026-10-05T17:43:03.143Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492299-ps6",
@@ -6009,7 +6144,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.299Z",
-      "updatedAt": "2026-10-05T17:43:03.394Z"
+      "updatedAt": "2026-10-05T17:43:03.394Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492417-9zr",
@@ -6024,7 +6160,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.417Z",
-      "updatedAt": "2026-10-05T17:43:03.630Z"
+      "updatedAt": "2026-10-05T17:43:03.630Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492527-wiw",
@@ -6039,7 +6176,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.526Z",
-      "updatedAt": "2026-10-05T17:43:03.898Z"
+      "updatedAt": "2026-10-05T17:43:03.898Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492631-x1y",
@@ -6054,7 +6192,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.631Z",
-      "updatedAt": "2026-10-05T17:43:04.221Z"
+      "updatedAt": "2026-10-05T17:43:04.221Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492680-uvw",
@@ -6069,7 +6208,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.680Z",
-      "updatedAt": "2026-10-05T17:43:04.534Z"
+      "updatedAt": "2026-10-05T17:43:04.534Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492783-coo",
@@ -6084,7 +6224,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.783Z",
-      "updatedAt": "2026-10-05T17:43:04.904Z"
+      "updatedAt": "2026-10-05T17:43:04.904Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492902-a5x",
@@ -6099,7 +6240,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.902Z",
-      "updatedAt": "2026-10-05T17:43:05.317Z"
+      "updatedAt": "2026-10-05T17:43:05.317Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217492958-4yu",
@@ -6114,7 +6256,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:52.958Z",
-      "updatedAt": "2026-10-05T17:43:05.819Z"
+      "updatedAt": "2026-10-05T17:43:05.819Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493076-2om",
@@ -6129,7 +6272,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.076Z",
-      "updatedAt": "2026-10-05T17:43:06.325Z"
+      "updatedAt": "2026-10-05T17:43:06.325Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493125-bg6",
@@ -6144,7 +6288,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.125Z",
-      "updatedAt": "2026-10-05T17:43:06.909Z"
+      "updatedAt": "2026-10-05T17:43:06.909Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493173-ipq",
@@ -6159,7 +6304,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.173Z",
-      "updatedAt": "2026-10-05T17:43:07.471Z"
+      "updatedAt": "2026-10-05T17:43:07.471Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493219-1xi",
@@ -6174,7 +6320,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.219Z",
-      "updatedAt": "2026-10-05T17:43:07.879Z"
+      "updatedAt": "2026-10-05T17:43:07.879Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493259-7n1",
@@ -6189,7 +6336,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.259Z",
-      "updatedAt": "2026-10-05T17:43:08.208Z"
+      "updatedAt": "2026-10-05T17:43:08.208Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493316-dps",
@@ -6204,7 +6352,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.316Z",
-      "updatedAt": "2026-10-05T17:43:08.545Z"
+      "updatedAt": "2026-10-05T17:43:08.545Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493366-62e",
@@ -6219,7 +6368,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.366Z",
-      "updatedAt": "2026-10-05T17:43:08.857Z"
+      "updatedAt": "2026-10-05T17:43:08.857Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493418-jx7",
@@ -6234,7 +6384,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.418Z",
-      "updatedAt": "2026-10-05T17:43:09.461Z"
+      "updatedAt": "2026-10-05T17:43:09.461Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493468-r6b",
@@ -6249,7 +6400,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.468Z",
-      "updatedAt": "2026-10-05T17:43:09.801Z"
+      "updatedAt": "2026-10-05T17:43:09.801Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493564-vb3",
@@ -6264,7 +6416,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.564Z",
-      "updatedAt": "2026-10-05T17:43:10.096Z"
+      "updatedAt": "2026-10-05T17:43:10.096Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493613-br7",
@@ -6279,7 +6432,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.613Z",
-      "updatedAt": "2026-10-05T17:43:10.399Z"
+      "updatedAt": "2026-10-05T17:43:10.399Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493660-smf",
@@ -6294,7 +6448,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.660Z",
-      "updatedAt": "2026-10-05T17:43:10.715Z"
+      "updatedAt": "2026-10-05T17:43:10.715Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493706-cot",
@@ -6309,7 +6464,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.706Z",
-      "updatedAt": "2026-10-05T17:43:11.070Z"
+      "updatedAt": "2026-10-05T17:43:11.070Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493800-2ma",
@@ -6324,7 +6480,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.800Z",
-      "updatedAt": "2026-10-05T17:43:11.604Z"
+      "updatedAt": "2026-10-05T17:43:11.604Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493856-7zd",
@@ -6339,7 +6496,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.856Z",
-      "updatedAt": "2026-10-05T17:43:12.014Z"
+      "updatedAt": "2026-10-05T17:43:12.014Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493904-goo",
@@ -6354,7 +6512,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.904Z",
-      "updatedAt": "2026-10-05T17:43:12.415Z"
+      "updatedAt": "2026-10-05T17:43:12.415Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217493946-obx",
@@ -6369,7 +6528,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:53.946Z",
-      "updatedAt": "2026-10-05T17:43:12.794Z"
+      "updatedAt": "2026-10-05T17:43:12.794Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494007-t7h",
@@ -6384,7 +6544,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.007Z",
-      "updatedAt": "2026-10-05T17:43:13.259Z"
+      "updatedAt": "2026-10-05T17:43:13.259Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494057-na3",
@@ -6399,7 +6560,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.057Z",
-      "updatedAt": "2026-10-05T17:43:13.907Z"
+      "updatedAt": "2026-10-05T17:43:13.907Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494102-7uc",
@@ -6414,7 +6576,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.102Z",
-      "updatedAt": "2026-10-05T17:43:14.312Z"
+      "updatedAt": "2026-10-05T17:43:14.312Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494227-4u5",
@@ -6429,7 +6592,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.227Z",
-      "updatedAt": "2026-10-05T17:43:14.847Z"
+      "updatedAt": "2026-10-05T17:43:14.847Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494276-ghw",
@@ -6444,7 +6608,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.276Z",
-      "updatedAt": "2026-10-05T17:43:15.327Z"
+      "updatedAt": "2026-10-05T17:43:15.327Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494337-0lc",
@@ -6459,7 +6624,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.337Z",
-      "updatedAt": "2026-10-05T17:43:15.915Z"
+      "updatedAt": "2026-10-05T17:43:15.915Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494465-vm6",
@@ -6474,7 +6640,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T16:24:54.465Z",
-      "updatedAt": "2026-10-05T17:43:16.316Z"
+      "updatedAt": "2026-10-05T17:43:16.316Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494567-lct",
@@ -6489,7 +6656,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.567Z",
-      "updatedAt": "2026-10-05T17:43:16.828Z"
+      "updatedAt": "2026-10-05T17:43:16.828Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494616-k1s",
@@ -6504,7 +6672,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.616Z",
-      "updatedAt": "2026-10-05T17:43:17.245Z"
+      "updatedAt": "2026-10-05T17:43:17.245Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494672-kaf",
@@ -6519,7 +6688,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.672Z",
-      "updatedAt": "2026-10-05T17:43:17.858Z"
+      "updatedAt": "2026-10-05T17:43:17.858Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494727-oe8",
@@ -6534,7 +6704,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.727Z",
-      "updatedAt": "2026-10-05T17:43:18.214Z"
+      "updatedAt": "2026-10-05T17:43:18.214Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494786-t1j",
@@ -6549,7 +6720,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.786Z",
-      "updatedAt": "2026-10-05T17:43:18.531Z"
+      "updatedAt": "2026-10-05T17:43:18.531Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494906-4xc",
@@ -6564,7 +6736,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.906Z",
-      "updatedAt": "2026-10-05T17:43:18.812Z"
+      "updatedAt": "2026-10-05T17:43:18.812Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217494959-n1o",
@@ -6579,7 +6752,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:54.959Z",
-      "updatedAt": "2026-10-05T17:43:19.096Z"
+      "updatedAt": "2026-10-05T17:43:19.096Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495101-dxs",
@@ -6596,7 +6770,8 @@
       "createdAt": "2026-10-05T16:24:55.101Z",
       "updatedAt": "2026-10-06T08:32:49.592Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495150-whp",
@@ -6613,7 +6788,8 @@
       "createdAt": "2026-10-05T16:24:55.150Z",
       "updatedAt": "2026-10-06T08:36:33.030Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495247-fgi",
@@ -6630,7 +6806,8 @@
       "createdAt": "2026-10-05T16:24:55.247Z",
       "updatedAt": "2026-10-06T08:40:57.574Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495300-2je",
@@ -6647,7 +6824,8 @@
       "createdAt": "2026-10-05T16:24:55.300Z",
       "updatedAt": "2026-10-06T08:42:18.743Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495352-y6t",
@@ -6664,7 +6842,8 @@
       "createdAt": "2026-10-05T16:24:55.352Z",
       "updatedAt": "2026-10-06T12:54:52.005Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495442-1hm",
@@ -6681,7 +6860,8 @@
       "createdAt": "2026-10-05T16:24:55.442Z",
       "updatedAt": "2026-10-06T12:53:45.349Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495506-k0m",
@@ -6698,7 +6878,8 @@
       "createdAt": "2026-10-05T16:24:55.506Z",
       "updatedAt": "2026-10-06T12:56:10.158Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495731-a3v",
@@ -6715,7 +6896,8 @@
       "createdAt": "2026-10-05T16:24:55.731Z",
       "updatedAt": "2026-10-06T12:58:48.752Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217495942-yc8",
@@ -6732,7 +6914,8 @@
       "createdAt": "2026-10-05T16:24:55.942Z",
       "updatedAt": "2026-10-06T12:59:30.871Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217496095-f3u",
@@ -6749,7 +6932,8 @@
       "createdAt": "2026-10-05T16:24:56.095Z",
       "updatedAt": "2026-10-06T13:00:20.762Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217496272-evh",
@@ -6766,7 +6950,8 @@
       "createdAt": "2026-10-05T16:24:56.272Z",
       "updatedAt": "2026-10-06T13:01:07.535Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217496764-3ca",
@@ -6783,7 +6968,8 @@
       "createdAt": "2026-10-05T16:24:56.764Z",
       "updatedAt": "2026-10-06T13:08:51.290Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217497007-sr4",
@@ -6800,7 +6986,8 @@
       "createdAt": "2026-10-05T16:24:57.007Z",
       "updatedAt": "2026-10-06T13:09:24.474Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217497536-cgt",
@@ -6817,7 +7004,8 @@
       "createdAt": "2026-10-05T16:24:57.536Z",
       "updatedAt": "2026-10-06T13:20:30.007Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217497785-3yj",
@@ -6834,7 +7022,8 @@
       "createdAt": "2026-10-05T16:24:57.785Z",
       "updatedAt": "2026-10-06T13:19:10.842Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217498031-mi7",
@@ -6851,7 +7040,8 @@
       "createdAt": "2026-10-05T16:24:58.031Z",
       "updatedAt": "2026-10-06T13:17:47.178Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217498567-674",
@@ -6866,7 +7056,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:58.567Z",
-      "updatedAt": "2026-10-05T17:43:27.094Z"
+      "updatedAt": "2026-10-05T17:43:27.094Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217498907-hiq",
@@ -6883,7 +7074,8 @@
       "createdAt": "2026-10-05T16:24:58.907Z",
       "updatedAt": "2026-10-06T15:13:33.430Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217499148-ket",
@@ -6900,7 +7092,8 @@
       "createdAt": "2026-10-05T16:24:59.148Z",
       "updatedAt": "2026-10-06T13:29:04.329Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217499330-huh",
@@ -6917,7 +7110,8 @@
       "createdAt": "2026-10-05T16:24:59.330Z",
       "updatedAt": "2026-10-06T15:35:44.185Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217499488-9ai",
@@ -6934,7 +7128,8 @@
       "createdAt": "2026-10-05T16:24:59.488Z",
       "updatedAt": "2026-10-06T15:31:39.911Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217499792-te2",
@@ -6949,7 +7144,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:59.792Z",
-      "updatedAt": "2026-10-05T17:43:29.034Z"
+      "updatedAt": "2026-10-05T17:43:29.034Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217499932-pgt",
@@ -6964,7 +7160,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:24:59.932Z",
-      "updatedAt": "2026-10-05T17:43:29.414Z"
+      "updatedAt": "2026-10-05T17:43:29.414Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217500082-asa",
@@ -6979,7 +7176,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:00.082Z",
-      "updatedAt": "2026-10-05T17:43:30.002Z"
+      "updatedAt": "2026-10-05T17:43:30.002Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217500240-ayj",
@@ -6994,7 +7192,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:00.240Z",
-      "updatedAt": "2026-10-05T17:43:30.600Z"
+      "updatedAt": "2026-10-05T17:43:30.600Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217500389-orb",
@@ -7009,7 +7208,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:00.389Z",
-      "updatedAt": "2026-10-05T17:43:31.201Z"
+      "updatedAt": "2026-10-05T17:43:31.201Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217500541-u3a",
@@ -7024,7 +7224,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:00.541Z",
-      "updatedAt": "2026-10-05T17:43:31.873Z"
+      "updatedAt": "2026-10-05T17:43:31.873Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217500712-h37",
@@ -7039,7 +7240,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:00.712Z",
-      "updatedAt": "2026-10-05T17:43:32.363Z"
+      "updatedAt": "2026-10-05T17:43:32.363Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501039-iwd",
@@ -7054,7 +7256,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.039Z",
-      "updatedAt": "2026-10-05T17:43:32.848Z"
+      "updatedAt": "2026-10-05T17:43:32.848Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501206-kog",
@@ -7069,7 +7272,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.206Z",
-      "updatedAt": "2026-10-05T17:43:33.340Z"
+      "updatedAt": "2026-10-05T17:43:33.340Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501406-jyk",
@@ -7084,7 +7288,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.406Z",
-      "updatedAt": "2026-10-05T17:43:33.614Z"
+      "updatedAt": "2026-10-05T17:43:33.614Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501607-ik4",
@@ -7099,7 +7304,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.607Z",
-      "updatedAt": "2026-10-05T17:43:34.402Z"
+      "updatedAt": "2026-10-05T17:43:34.402Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501769-v8j",
@@ -7114,7 +7320,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.768Z",
-      "updatedAt": "2026-10-05T17:43:35.278Z"
+      "updatedAt": "2026-10-05T17:43:35.278Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217501911-38h",
@@ -7129,7 +7336,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:01.911Z",
-      "updatedAt": "2026-10-05T17:43:35.439Z"
+      "updatedAt": "2026-10-05T17:43:35.439Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217502093-m5p",
@@ -7144,7 +7352,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:02.093Z",
-      "updatedAt": "2026-10-05T17:43:35.751Z"
+      "updatedAt": "2026-10-05T17:43:35.751Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217502302-ozb",
@@ -7159,7 +7368,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:02.302Z",
-      "updatedAt": "2026-10-05T17:43:36.013Z"
+      "updatedAt": "2026-10-05T17:43:36.013Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217502507-x1n",
@@ -7174,7 +7384,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:02.507Z",
-      "updatedAt": "2026-10-05T17:43:36.281Z"
+      "updatedAt": "2026-10-05T17:43:36.281Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217502698-c8p",
@@ -7189,7 +7400,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:02.698Z",
-      "updatedAt": "2026-10-05T17:43:36.597Z"
+      "updatedAt": "2026-10-05T17:43:36.597Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217502870-hyp",
@@ -7204,7 +7416,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:02.870Z",
-      "updatedAt": "2026-10-05T17:43:36.913Z"
+      "updatedAt": "2026-10-05T17:43:36.913Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217503223-fsj",
@@ -7219,7 +7432,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:03.223Z",
-      "updatedAt": "2026-10-05T17:43:37.249Z"
+      "updatedAt": "2026-10-05T17:43:37.249Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217503419-7a1",
@@ -7234,7 +7448,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:03.419Z",
-      "updatedAt": "2026-10-05T17:43:37.787Z"
+      "updatedAt": "2026-10-05T17:43:37.787Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217503568-dvm",
@@ -7249,7 +7464,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:03.568Z",
-      "updatedAt": "2026-10-05T17:43:38.084Z"
+      "updatedAt": "2026-10-05T17:43:38.084Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217503743-wy1",
@@ -7264,7 +7480,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T16:25:03.743Z",
-      "updatedAt": "2026-10-05T17:43:38.414Z"
+      "updatedAt": "2026-10-05T17:43:38.414Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217503926-i2r",
@@ -7279,7 +7496,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:03.926Z",
-      "updatedAt": "2026-10-05T17:43:38.987Z"
+      "updatedAt": "2026-10-05T17:43:38.987Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217504114-1r6",
@@ -7294,7 +7512,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:04.114Z",
-      "updatedAt": "2026-10-05T17:43:39.867Z"
+      "updatedAt": "2026-10-05T17:43:39.867Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217504328-i8l",
@@ -7309,7 +7528,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:04.328Z",
-      "updatedAt": "2026-10-05T17:43:40.631Z"
+      "updatedAt": "2026-10-05T17:43:40.631Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217504761-p0s",
@@ -7324,7 +7544,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:04.761Z",
-      "updatedAt": "2026-10-05T17:43:41.169Z"
+      "updatedAt": "2026-10-05T17:43:41.169Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217505181-mst",
@@ -7339,7 +7560,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:05.181Z",
-      "updatedAt": "2026-10-05T17:43:41.804Z"
+      "updatedAt": "2026-10-05T17:43:41.804Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217505428-n40",
@@ -7354,7 +7576,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:05.428Z",
-      "updatedAt": "2026-10-05T17:43:42.163Z"
+      "updatedAt": "2026-10-05T17:43:42.163Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217505664-f8w",
@@ -7369,7 +7592,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:05.664Z",
-      "updatedAt": "2026-10-05T17:43:42.673Z"
+      "updatedAt": "2026-10-05T17:43:42.673Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217505865-igt",
@@ -7384,7 +7608,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:05.865Z",
-      "updatedAt": "2026-10-05T17:43:43.150Z"
+      "updatedAt": "2026-10-05T17:43:43.150Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217506071-q5p",
@@ -7399,7 +7624,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:06.071Z",
-      "updatedAt": "2026-10-05T17:43:43.677Z"
+      "updatedAt": "2026-10-05T17:43:43.677Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217506266-gk3",
@@ -7414,7 +7640,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:06.266Z",
-      "updatedAt": "2026-10-05T17:43:44.177Z"
+      "updatedAt": "2026-10-05T17:43:44.177Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217506636-r00",
@@ -7429,7 +7656,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:06.636Z",
-      "updatedAt": "2026-10-05T17:43:44.663Z"
+      "updatedAt": "2026-10-05T17:43:44.663Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217506821-q4z",
@@ -7444,7 +7672,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:06.821Z",
-      "updatedAt": "2026-10-05T17:43:46.604Z"
+      "updatedAt": "2026-10-05T17:43:46.604Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217507017-5o3",
@@ -7459,7 +7688,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:07.017Z",
-      "updatedAt": "2026-10-05T17:43:47.235Z"
+      "updatedAt": "2026-10-05T17:43:47.235Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217507306-bkp",
@@ -7474,7 +7704,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:07.306Z",
-      "updatedAt": "2026-10-05T17:43:47.799Z"
+      "updatedAt": "2026-10-05T17:43:47.799Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217507578-8et",
@@ -7489,7 +7720,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:07.578Z",
-      "updatedAt": "2026-10-05T17:43:48.285Z"
+      "updatedAt": "2026-10-05T17:43:48.285Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217507855-80a",
@@ -7504,7 +7736,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:07.855Z",
-      "updatedAt": "2026-10-05T17:43:48.821Z"
+      "updatedAt": "2026-10-05T17:43:48.821Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217508333-wyb",
@@ -7519,7 +7752,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:08.333Z",
-      "updatedAt": "2026-10-05T17:43:49.280Z"
+      "updatedAt": "2026-10-05T17:43:49.280Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217508562-rth",
@@ -7534,7 +7768,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:08.562Z",
-      "updatedAt": "2026-10-05T17:43:49.880Z"
+      "updatedAt": "2026-10-05T17:43:49.880Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217508809-tem",
@@ -7549,7 +7784,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:08.809Z",
-      "updatedAt": "2026-10-05T17:43:50.327Z"
+      "updatedAt": "2026-10-05T17:43:50.327Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217509294-ouh",
@@ -7564,7 +7800,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:09.294Z",
-      "updatedAt": "2026-10-05T17:43:50.937Z"
+      "updatedAt": "2026-10-05T17:43:50.937Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217509896-3u4",
@@ -7579,7 +7816,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:09.896Z",
-      "updatedAt": "2026-10-05T17:43:51.670Z"
+      "updatedAt": "2026-10-05T17:43:51.670Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217510158-hzd",
@@ -7594,7 +7832,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:10.158Z",
-      "updatedAt": "2026-10-05T17:43:52.216Z"
+      "updatedAt": "2026-10-05T17:43:52.216Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217510385-qfd",
@@ -7609,7 +7848,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:10.385Z",
-      "updatedAt": "2026-10-05T17:43:52.982Z"
+      "updatedAt": "2026-10-05T17:43:52.982Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217510604-pp3",
@@ -7624,7 +7864,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:10.604Z",
-      "updatedAt": "2026-10-05T17:43:53.496Z"
+      "updatedAt": "2026-10-05T17:43:53.496Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217510820-49a",
@@ -7639,7 +7880,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:10.820Z",
-      "updatedAt": "2026-10-05T17:43:53.998Z"
+      "updatedAt": "2026-10-05T17:43:53.998Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217511065-0ql",
@@ -7654,7 +7896,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:11.065Z",
-      "updatedAt": "2026-10-05T17:43:54.662Z"
+      "updatedAt": "2026-10-05T17:43:54.662Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217511523-1vd",
@@ -7669,7 +7912,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:11.523Z",
-      "updatedAt": "2026-10-05T17:43:55.398Z"
+      "updatedAt": "2026-10-05T17:43:55.398Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217511966-brc",
@@ -7684,7 +7928,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:11.966Z",
-      "updatedAt": "2026-10-05T17:43:56.086Z"
+      "updatedAt": "2026-10-05T17:43:56.086Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217512184-4p6",
@@ -7699,7 +7944,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:12.184Z",
-      "updatedAt": "2026-10-05T17:43:56.485Z"
+      "updatedAt": "2026-10-05T17:43:56.485Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217512403-7u2",
@@ -7714,7 +7960,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:12.403Z",
-      "updatedAt": "2026-10-05T17:43:57.047Z"
+      "updatedAt": "2026-10-05T17:43:57.047Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217512635-78n",
@@ -7729,7 +7976,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:12.635Z",
-      "updatedAt": "2026-10-05T17:43:57.493Z"
+      "updatedAt": "2026-10-05T17:43:57.493Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217512857-eg3",
@@ -7744,7 +7992,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:12.857Z",
-      "updatedAt": "2026-10-05T17:43:57.973Z"
+      "updatedAt": "2026-10-05T17:43:57.973Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217513062-sc7",
@@ -7759,7 +8008,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:13.062Z",
-      "updatedAt": "2026-10-05T17:43:58.306Z"
+      "updatedAt": "2026-10-05T17:43:58.306Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217513262-dxg",
@@ -7774,7 +8024,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:13.262Z",
-      "updatedAt": "2026-10-05T17:43:58.747Z"
+      "updatedAt": "2026-10-05T17:43:58.747Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217513479-gtf",
@@ -7789,7 +8040,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:13.479Z",
-      "updatedAt": "2026-10-05T17:43:59.095Z"
+      "updatedAt": "2026-10-05T17:43:59.095Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217513702-wkc",
@@ -7804,7 +8056,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:13.702Z",
-      "updatedAt": "2026-10-05T17:43:59.459Z"
+      "updatedAt": "2026-10-05T17:43:59.459Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217514128-b10",
@@ -7819,7 +8072,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:14.128Z",
-      "updatedAt": "2026-10-05T17:43:59.793Z"
+      "updatedAt": "2026-10-05T17:43:59.793Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217514355-qza",
@@ -7834,7 +8088,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:14.354Z",
-      "updatedAt": "2026-10-05T17:44:00.153Z"
+      "updatedAt": "2026-10-05T17:44:00.153Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217514812-unv",
@@ -7849,7 +8104,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:14.812Z",
-      "updatedAt": "2026-10-05T17:44:00.458Z"
+      "updatedAt": "2026-10-05T17:44:00.458Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217515038-gbi",
@@ -7864,7 +8120,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:15.038Z",
-      "updatedAt": "2026-10-05T17:44:00.728Z"
+      "updatedAt": "2026-10-05T17:44:00.728Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217515292-52b",
@@ -7879,7 +8136,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:15.292Z",
-      "updatedAt": "2026-10-05T17:44:00.993Z"
+      "updatedAt": "2026-10-05T17:44:00.993Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217515530-0le",
@@ -7894,7 +8152,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:15.530Z",
-      "updatedAt": "2026-10-05T17:44:01.278Z"
+      "updatedAt": "2026-10-05T17:44:01.278Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217515732-ofe",
@@ -7909,7 +8168,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T16:25:15.732Z",
-      "updatedAt": "2026-10-05T17:44:01.571Z"
+      "updatedAt": "2026-10-05T17:44:01.571Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217515925-8oa",
@@ -7924,7 +8184,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:15.925Z",
-      "updatedAt": "2026-10-05T17:44:01.843Z"
+      "updatedAt": "2026-10-05T17:44:01.843Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217516351-tdp",
@@ -7939,7 +8200,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:16.351Z",
-      "updatedAt": "2026-10-05T17:44:02.126Z"
+      "updatedAt": "2026-10-05T17:44:02.126Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217516604-j61",
@@ -7954,7 +8216,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:16.604Z",
-      "updatedAt": "2026-10-05T17:44:02.462Z"
+      "updatedAt": "2026-10-05T17:44:02.462Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217516819-8lt",
@@ -7969,7 +8232,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:16.819Z",
-      "updatedAt": "2026-10-05T17:44:02.827Z"
+      "updatedAt": "2026-10-05T17:44:02.827Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217517085-k7o",
@@ -7984,7 +8248,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:17.085Z",
-      "updatedAt": "2026-10-05T17:44:03.099Z"
+      "updatedAt": "2026-10-05T17:44:03.099Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217517394-nav",
@@ -7999,7 +8264,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:17.394Z",
-      "updatedAt": "2026-10-05T17:44:03.376Z"
+      "updatedAt": "2026-10-05T17:44:03.376Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217517849-o26",
@@ -8014,7 +8280,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:17.849Z",
-      "updatedAt": "2026-10-05T17:44:03.667Z"
+      "updatedAt": "2026-10-05T17:44:03.667Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217518699-nng",
@@ -8029,7 +8296,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:18.699Z",
-      "updatedAt": "2026-10-05T17:44:03.944Z"
+      "updatedAt": "2026-10-05T17:44:03.944Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217518868-htp",
@@ -8044,7 +8312,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:18.868Z",
-      "updatedAt": "2026-10-05T17:44:04.221Z"
+      "updatedAt": "2026-10-05T17:44:04.221Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217519045-rd6",
@@ -8059,7 +8328,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:19.045Z",
-      "updatedAt": "2026-10-05T17:44:04.494Z"
+      "updatedAt": "2026-10-05T17:44:04.494Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217519268-za7",
@@ -8074,7 +8344,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:19.268Z",
-      "updatedAt": "2026-10-05T17:44:04.792Z"
+      "updatedAt": "2026-10-05T17:44:04.792Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217519528-wz3",
@@ -8089,7 +8360,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:19.528Z",
-      "updatedAt": "2026-10-05T17:44:05.079Z"
+      "updatedAt": "2026-10-05T17:44:05.079Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217519668-n3x",
@@ -8104,7 +8376,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:19.668Z",
-      "updatedAt": "2026-10-05T17:44:05.339Z"
+      "updatedAt": "2026-10-05T17:44:05.339Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217519875-u8i",
@@ -8119,7 +8392,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:19.875Z",
-      "updatedAt": "2026-10-05T17:44:05.595Z"
+      "updatedAt": "2026-10-05T17:44:05.595Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217520067-po9",
@@ -8134,7 +8408,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:20.067Z",
-      "updatedAt": "2026-10-05T17:44:05.879Z"
+      "updatedAt": "2026-10-05T17:44:05.879Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217520283-iq6",
@@ -8149,7 +8424,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:20.283Z",
-      "updatedAt": "2026-10-05T17:44:06.189Z"
+      "updatedAt": "2026-10-05T17:44:06.189Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217520477-nvo",
@@ -8164,7 +8440,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:20.477Z",
-      "updatedAt": "2026-10-05T17:44:06.500Z"
+      "updatedAt": "2026-10-05T17:44:06.500Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217520828-o3t",
@@ -8179,7 +8456,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:20.828Z",
-      "updatedAt": "2026-10-05T17:44:06.785Z"
+      "updatedAt": "2026-10-05T17:44:06.785Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217520965-h7n",
@@ -8194,7 +8472,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:20.965Z",
-      "updatedAt": "2026-10-05T17:44:07.093Z"
+      "updatedAt": "2026-10-05T17:44:07.093Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217521106-l9b",
@@ -8209,7 +8488,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:21.106Z",
-      "updatedAt": "2026-10-05T17:44:07.452Z"
+      "updatedAt": "2026-10-05T17:44:07.452Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217521327-3xs",
@@ -8224,7 +8504,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:21.327Z",
-      "updatedAt": "2026-10-05T17:44:07.818Z"
+      "updatedAt": "2026-10-05T17:44:07.818Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217521587-u6p",
@@ -8239,7 +8520,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:21.587Z",
-      "updatedAt": "2026-10-05T17:44:08.132Z"
+      "updatedAt": "2026-10-05T17:44:08.132Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217521958-7yy",
@@ -8254,7 +8536,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:21.958Z",
-      "updatedAt": "2026-10-05T17:44:08.575Z"
+      "updatedAt": "2026-10-05T17:44:08.575Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217522260-yk0",
@@ -8269,7 +8552,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:22.260Z",
-      "updatedAt": "2026-10-05T17:44:08.946Z"
+      "updatedAt": "2026-10-05T17:44:08.946Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217522409-k3v",
@@ -8284,7 +8568,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:22.409Z",
-      "updatedAt": "2026-10-05T17:44:09.466Z"
+      "updatedAt": "2026-10-05T17:44:09.466Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217522546-f6u",
@@ -8299,7 +8584,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:22.546Z",
-      "updatedAt": "2026-10-05T17:44:09.827Z"
+      "updatedAt": "2026-10-05T17:44:09.827Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217522678-jof",
@@ -8314,7 +8600,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:22.678Z",
-      "updatedAt": "2026-10-05T17:44:10.166Z"
+      "updatedAt": "2026-10-05T17:44:10.166Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217522821-5lv",
@@ -8329,7 +8616,24 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:22.821Z",
-      "updatedAt": "2026-10-05T17:44:10.524Z"
+      "updatedAt": "2026-10-05T17:44:10.524Z",
+      "minimumOrderQuantity": 1
+    },
+    {
+      "id": "prd-1791217523444-2cp",
+      "skuId": "sku-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "categoryId": "cat-1791208230263-4nd",
+      "subcategoryId": "sub-1791217522981-syk",
+      "name": "ALLOY SEAT QUICK RELEASE BLACK 31.8MM",
+      "imageUrl": "",
+      "hsnCode": "",
+      "packSize": "1 Unit",
+      "specifications": "",
+      "status": "Active",
+      "createdAt": "2026-10-05T16:25:23.444Z",
+      "updatedAt": "2026-11-06T06:32:59.343Z",
+      "minimumOrderQuantity": 3
     },
     {
       "id": "prd-1791217524086-wzn",
@@ -8344,7 +8648,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:24.086Z",
-      "updatedAt": "2026-10-05T17:44:11.653Z"
+      "updatedAt": "2026-10-05T17:44:11.653Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217524358-0ys",
@@ -8359,7 +8664,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:24.358Z",
-      "updatedAt": "2026-10-05T17:44:11.925Z"
+      "updatedAt": "2026-10-05T17:44:11.925Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217524583-dut",
@@ -8374,7 +8680,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:24.583Z",
-      "updatedAt": "2026-10-05T17:44:12.207Z"
+      "updatedAt": "2026-10-05T17:44:12.207Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217524790-qr9",
@@ -8389,7 +8696,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:24.790Z",
-      "updatedAt": "2026-10-05T17:44:12.587Z"
+      "updatedAt": "2026-10-05T17:44:12.587Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217524960-7vg",
@@ -8404,7 +8712,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:24.960Z",
-      "updatedAt": "2026-10-05T17:44:12.944Z"
+      "updatedAt": "2026-10-05T17:44:12.944Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217525131-sro",
@@ -8419,7 +8728,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:25.131Z",
-      "updatedAt": "2026-10-05T17:44:13.214Z"
+      "updatedAt": "2026-10-05T17:44:13.214Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217525299-vo5",
@@ -8434,7 +8744,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:25.299Z",
-      "updatedAt": "2026-10-05T17:44:13.555Z"
+      "updatedAt": "2026-10-05T17:44:13.555Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217525705-67p",
@@ -8449,7 +8760,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:25.705Z",
-      "updatedAt": "2026-10-05T17:44:13.792Z"
+      "updatedAt": "2026-10-05T17:44:13.792Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217526131-eex",
@@ -8464,7 +8776,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:26.131Z",
-      "updatedAt": "2026-10-05T17:44:14.096Z"
+      "updatedAt": "2026-10-05T17:44:14.096Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217526308-bja",
@@ -8479,7 +8792,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:26.307Z",
-      "updatedAt": "2026-10-05T17:44:14.392Z"
+      "updatedAt": "2026-10-05T17:44:14.392Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217526492-ctt",
@@ -8494,7 +8808,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:26.492Z",
-      "updatedAt": "2026-10-05T17:44:14.888Z"
+      "updatedAt": "2026-10-05T17:44:14.888Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217526733-ha2",
@@ -8509,7 +8824,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:26.733Z",
-      "updatedAt": "2026-10-05T17:44:15.149Z"
+      "updatedAt": "2026-10-05T17:44:15.149Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217526943-ptx",
@@ -8524,7 +8840,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:26.943Z",
-      "updatedAt": "2026-10-05T17:44:15.446Z"
+      "updatedAt": "2026-10-05T17:44:15.446Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217527300-zur",
@@ -8539,7 +8856,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:27.300Z",
-      "updatedAt": "2026-10-05T16:25:27.300Z"
+      "updatedAt": "2026-10-05T16:25:27.300Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217527460-h9r",
@@ -8554,7 +8872,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:27.460Z",
-      "updatedAt": "2026-10-05T16:25:27.460Z"
+      "updatedAt": "2026-10-05T16:25:27.460Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217527640-qum",
@@ -8569,7 +8888,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:27.640Z",
-      "updatedAt": "2026-10-05T16:25:27.640Z"
+      "updatedAt": "2026-10-05T16:25:27.640Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217527813-1zz",
@@ -8584,7 +8904,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:27.813Z",
-      "updatedAt": "2026-10-05T16:25:27.813Z"
+      "updatedAt": "2026-10-05T16:25:27.813Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217528009-ywg",
@@ -8599,7 +8920,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:28.009Z",
-      "updatedAt": "2026-10-05T16:25:28.009Z"
+      "updatedAt": "2026-10-05T16:25:28.009Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217528228-4zz",
@@ -8614,7 +8936,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:28.228Z",
-      "updatedAt": "2026-10-05T16:25:28.228Z"
+      "updatedAt": "2026-10-05T16:25:28.228Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217528525-ny1",
@@ -8629,7 +8952,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:28.525Z",
-      "updatedAt": "2026-10-05T16:25:28.525Z"
+      "updatedAt": "2026-10-05T16:25:28.525Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217528762-knk",
@@ -8644,7 +8968,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:28.762Z",
-      "updatedAt": "2026-10-05T16:25:28.762Z"
+      "updatedAt": "2026-10-05T16:25:28.762Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217529039-aq5",
@@ -8659,7 +8984,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:29.039Z",
-      "updatedAt": "2026-10-05T16:25:29.039Z"
+      "updatedAt": "2026-10-05T16:25:29.039Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217529358-6yk",
@@ -8674,7 +9000,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:29.358Z",
-      "updatedAt": "2026-10-05T16:25:29.358Z"
+      "updatedAt": "2026-10-05T16:25:29.358Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217529739-2lb",
@@ -8689,7 +9016,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:29.739Z",
-      "updatedAt": "2026-10-05T16:25:29.739Z"
+      "updatedAt": "2026-10-05T16:25:29.739Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217530117-5hj",
@@ -8704,7 +9032,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:30.117Z",
-      "updatedAt": "2026-10-05T16:25:30.117Z"
+      "updatedAt": "2026-10-05T16:25:30.117Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217530499-830",
@@ -8719,7 +9048,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:30.499Z",
-      "updatedAt": "2026-10-05T16:25:30.499Z"
+      "updatedAt": "2026-10-05T16:25:30.499Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217530848-q43",
@@ -8734,7 +9064,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:30.848Z",
-      "updatedAt": "2026-10-05T16:25:30.848Z"
+      "updatedAt": "2026-10-05T16:25:30.848Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217531189-adg",
@@ -8749,7 +9080,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:31.189Z",
-      "updatedAt": "2026-10-05T16:25:31.189Z"
+      "updatedAt": "2026-10-05T16:25:31.189Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217531844-sbh",
@@ -8764,7 +9096,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:31.844Z",
-      "updatedAt": "2026-10-05T17:44:21.179Z"
+      "updatedAt": "2026-10-05T17:44:21.179Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217532120-3mb",
@@ -8779,7 +9112,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T16:25:32.120Z",
-      "updatedAt": "2026-10-05T17:44:21.523Z"
+      "updatedAt": "2026-10-05T17:44:21.523Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217532334-nq4",
@@ -8794,7 +9128,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:32.334Z",
-      "updatedAt": "2026-10-05T17:44:21.829Z"
+      "updatedAt": "2026-10-05T17:44:21.829Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217532527-0lz",
@@ -8809,7 +9144,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:32.527Z",
-      "updatedAt": "2026-10-05T17:44:22.137Z"
+      "updatedAt": "2026-10-05T17:44:22.137Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217532740-eal",
@@ -8824,7 +9160,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:32.740Z",
-      "updatedAt": "2026-10-05T17:44:22.440Z"
+      "updatedAt": "2026-10-05T17:44:22.440Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217533156-uf8",
@@ -8839,7 +9176,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:33.156Z",
-      "updatedAt": "2026-10-05T17:44:22.713Z"
+      "updatedAt": "2026-10-05T17:44:22.713Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217533632-3nd",
@@ -8854,7 +9192,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:33.632Z",
-      "updatedAt": "2026-10-05T17:44:22.978Z"
+      "updatedAt": "2026-10-05T17:44:22.978Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217533833-bwq",
@@ -8869,7 +9208,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:33.833Z",
-      "updatedAt": "2026-10-05T17:44:23.284Z"
+      "updatedAt": "2026-10-05T17:44:23.284Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217534010-dq8",
@@ -8884,7 +9224,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:34.010Z",
-      "updatedAt": "2026-10-05T17:44:23.741Z"
+      "updatedAt": "2026-10-05T17:44:23.741Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217534208-4db",
@@ -8899,7 +9240,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:34.208Z",
-      "updatedAt": "2026-10-05T17:44:24.122Z"
+      "updatedAt": "2026-10-05T17:44:24.122Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217534518-dhq",
@@ -8914,7 +9256,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:34.518Z",
-      "updatedAt": "2026-10-05T17:44:24.542Z"
+      "updatedAt": "2026-10-05T17:44:24.542Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217534844-odb",
@@ -8929,7 +9272,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:34.844Z",
-      "updatedAt": "2026-10-05T17:44:24.894Z"
+      "updatedAt": "2026-10-05T17:44:24.894Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217535123-q1r",
@@ -8944,7 +9288,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:35.123Z",
-      "updatedAt": "2026-10-05T17:44:25.247Z"
+      "updatedAt": "2026-10-05T17:44:25.247Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217535417-ddn",
@@ -8959,7 +9304,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:35.417Z",
-      "updatedAt": "2026-10-05T17:44:25.849Z"
+      "updatedAt": "2026-10-05T17:44:25.849Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217535785-52c",
@@ -8974,7 +9320,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:35.785Z",
-      "updatedAt": "2026-10-05T17:44:26.481Z"
+      "updatedAt": "2026-10-05T17:44:26.481Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217536084-iej",
@@ -8989,7 +9336,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:36.084Z",
-      "updatedAt": "2026-10-05T17:44:26.963Z"
+      "updatedAt": "2026-10-05T17:44:26.963Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217536351-7yg",
@@ -9004,7 +9352,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:36.351Z",
-      "updatedAt": "2026-10-05T17:44:27.580Z"
+      "updatedAt": "2026-10-05T17:44:27.580Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217536776-r1o",
@@ -9019,7 +9368,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:36.776Z",
-      "updatedAt": "2026-10-05T17:44:29.393Z"
+      "updatedAt": "2026-10-05T17:44:29.393Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217537216-337",
@@ -9034,7 +9384,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:37.216Z",
-      "updatedAt": "2026-10-05T17:44:30.807Z"
+      "updatedAt": "2026-10-05T17:44:30.807Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217537510-fl2",
@@ -9049,7 +9400,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:37.510Z",
-      "updatedAt": "2026-10-05T17:44:31.607Z"
+      "updatedAt": "2026-10-05T17:44:31.607Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217537913-493",
@@ -9064,7 +9416,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:37.913Z",
-      "updatedAt": "2026-10-05T17:44:32.162Z"
+      "updatedAt": "2026-10-05T17:44:32.162Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217538186-edo",
@@ -9079,7 +9432,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:38.186Z",
-      "updatedAt": "2026-10-05T17:44:32.589Z"
+      "updatedAt": "2026-10-05T17:44:32.589Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217538441-b2a",
@@ -9094,7 +9448,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:38.441Z",
-      "updatedAt": "2026-10-05T17:44:33.028Z"
+      "updatedAt": "2026-10-05T17:44:33.028Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217538710-a38",
@@ -9109,7 +9464,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:38.710Z",
-      "updatedAt": "2026-10-05T17:44:33.445Z"
+      "updatedAt": "2026-10-05T17:44:33.445Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217539009-z9r",
@@ -9124,7 +9480,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:39.009Z",
-      "updatedAt": "2026-10-05T17:44:33.970Z"
+      "updatedAt": "2026-10-05T17:44:33.970Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217539376-dcm",
@@ -9139,7 +9496,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:39.376Z",
-      "updatedAt": "2026-10-05T17:44:34.306Z"
+      "updatedAt": "2026-10-05T17:44:34.306Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217539765-mqq",
@@ -9154,7 +9512,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:39.765Z",
-      "updatedAt": "2026-10-05T17:44:34.817Z"
+      "updatedAt": "2026-10-05T17:44:34.817Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217540241-8wk",
@@ -9169,7 +9528,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:40.241Z",
-      "updatedAt": "2026-10-05T17:44:35.355Z"
+      "updatedAt": "2026-10-05T17:44:35.355Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217540641-2xs",
@@ -9184,7 +9544,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:40.641Z",
-      "updatedAt": "2026-10-05T17:44:35.942Z"
+      "updatedAt": "2026-10-05T17:44:35.942Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217541065-v6x",
@@ -9199,7 +9560,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:41.065Z",
-      "updatedAt": "2026-10-05T17:44:36.437Z"
+      "updatedAt": "2026-10-05T17:44:36.437Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217541407-5we",
@@ -9214,7 +9576,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:41.407Z",
-      "updatedAt": "2026-10-05T17:44:37.153Z"
+      "updatedAt": "2026-10-05T17:44:37.153Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217541747-s63",
@@ -9229,7 +9592,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:41.747Z",
-      "updatedAt": "2026-10-05T17:44:37.732Z"
+      "updatedAt": "2026-10-05T17:44:37.732Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217542409-ggr",
@@ -9244,7 +9608,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:42.409Z",
-      "updatedAt": "2026-10-05T17:44:38.225Z"
+      "updatedAt": "2026-10-05T17:44:38.225Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217542764-u21",
@@ -9259,7 +9624,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:42.764Z",
-      "updatedAt": "2026-10-05T17:44:38.695Z"
+      "updatedAt": "2026-10-05T17:44:38.695Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217543084-qem",
@@ -9274,7 +9640,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:43.084Z",
-      "updatedAt": "2026-10-05T17:44:39.298Z"
+      "updatedAt": "2026-10-05T17:44:39.298Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217543392-5ax",
@@ -9289,7 +9656,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:43.392Z",
-      "updatedAt": "2026-10-05T17:44:39.838Z"
+      "updatedAt": "2026-10-05T17:44:39.838Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217543689-ax0",
@@ -9304,7 +9672,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:43.688Z",
-      "updatedAt": "2026-10-05T17:44:40.325Z"
+      "updatedAt": "2026-10-05T17:44:40.325Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217543971-2mg",
@@ -9319,7 +9688,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:43.971Z",
-      "updatedAt": "2026-10-05T17:44:40.737Z"
+      "updatedAt": "2026-10-05T17:44:40.737Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217544262-rus",
@@ -9334,7 +9704,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:44.262Z",
-      "updatedAt": "2026-10-05T17:44:41.086Z"
+      "updatedAt": "2026-10-05T17:44:41.086Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217544888-yec",
@@ -9349,7 +9720,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:44.888Z",
-      "updatedAt": "2026-10-05T17:44:41.379Z"
+      "updatedAt": "2026-10-05T17:44:41.379Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217545174-gf3",
@@ -9364,7 +9736,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:45.173Z",
-      "updatedAt": "2026-10-05T17:44:41.692Z"
+      "updatedAt": "2026-10-05T17:44:41.692Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217545459-jae",
@@ -9379,7 +9752,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:45.459Z",
-      "updatedAt": "2026-10-05T17:44:42.049Z"
+      "updatedAt": "2026-10-05T17:44:42.049Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217545750-928",
@@ -9394,7 +9768,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:45.750Z",
-      "updatedAt": "2026-10-05T17:44:42.398Z"
+      "updatedAt": "2026-10-05T17:44:42.398Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217546053-7ty",
@@ -9409,7 +9784,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:46.053Z",
-      "updatedAt": "2026-10-05T17:44:42.697Z"
+      "updatedAt": "2026-10-05T17:44:42.697Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217546340-xmb",
@@ -9424,7 +9800,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:46.340Z",
-      "updatedAt": "2026-10-05T17:44:42.966Z"
+      "updatedAt": "2026-10-05T17:44:42.966Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217546626-n09",
@@ -9439,7 +9816,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:46.626Z",
-      "updatedAt": "2026-10-05T17:44:43.279Z"
+      "updatedAt": "2026-10-05T17:44:43.279Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217546924-h3j",
@@ -9454,7 +9832,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:46.924Z",
-      "updatedAt": "2026-10-05T17:44:43.559Z"
+      "updatedAt": "2026-10-05T17:44:43.559Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217547541-o10",
@@ -9469,7 +9848,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:47.541Z",
-      "updatedAt": "2026-10-05T17:44:43.862Z"
+      "updatedAt": "2026-10-05T17:44:43.862Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217547823-vjv",
@@ -9484,7 +9864,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:47.823Z",
-      "updatedAt": "2026-10-05T17:44:44.135Z"
+      "updatedAt": "2026-10-05T17:44:44.135Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217548401-758",
@@ -9499,7 +9880,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:25:48.401Z",
-      "updatedAt": "2026-10-05T17:44:44.543Z"
+      "updatedAt": "2026-10-05T17:44:44.543Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217897175-q6k",
@@ -9514,7 +9896,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:37.175Z",
-      "updatedAt": "2026-10-05T17:44:15.720Z"
+      "updatedAt": "2026-10-05T17:44:15.720Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217897644-z49",
@@ -9529,7 +9912,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:37.644Z",
-      "updatedAt": "2026-10-05T17:44:15.967Z"
+      "updatedAt": "2026-10-05T17:44:15.967Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217898076-pwp",
@@ -9544,7 +9928,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:38.076Z",
-      "updatedAt": "2026-10-05T17:44:16.216Z"
+      "updatedAt": "2026-10-05T17:44:16.216Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217898494-ih1",
@@ -9559,7 +9944,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:38.494Z",
-      "updatedAt": "2026-10-05T17:44:16.468Z"
+      "updatedAt": "2026-10-05T17:44:16.468Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217898942-du7",
@@ -9574,7 +9960,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:38.942Z",
-      "updatedAt": "2026-10-05T17:44:16.773Z"
+      "updatedAt": "2026-10-05T17:44:16.773Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217899338-0dx",
@@ -9589,7 +9976,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:39.338Z",
-      "updatedAt": "2026-10-05T17:44:17.072Z"
+      "updatedAt": "2026-10-05T17:44:17.072Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217899741-3kc",
@@ -9604,7 +9992,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:39.741Z",
-      "updatedAt": "2026-10-05T17:44:17.334Z"
+      "updatedAt": "2026-10-05T17:44:17.334Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217900179-if6",
@@ -9619,7 +10008,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:40.179Z",
-      "updatedAt": "2026-10-05T17:44:17.594Z"
+      "updatedAt": "2026-10-05T17:44:17.594Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217900656-gji",
@@ -9634,7 +10024,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:40.656Z",
-      "updatedAt": "2026-10-05T17:44:17.901Z"
+      "updatedAt": "2026-10-05T17:44:17.901Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217901007-tqf",
@@ -9649,7 +10040,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:41.007Z",
-      "updatedAt": "2026-10-05T17:44:18.226Z"
+      "updatedAt": "2026-10-05T17:44:18.226Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217901362-d3o",
@@ -9664,7 +10056,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:41.362Z",
-      "updatedAt": "2026-10-05T17:44:18.540Z"
+      "updatedAt": "2026-10-05T17:44:18.540Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217901691-dqu",
@@ -9679,7 +10072,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:41.691Z",
-      "updatedAt": "2026-10-05T17:44:18.817Z"
+      "updatedAt": "2026-10-05T17:44:18.817Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217902111-nmv",
@@ -9694,7 +10088,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:42.111Z",
-      "updatedAt": "2026-10-05T17:44:19.139Z"
+      "updatedAt": "2026-10-05T17:44:19.139Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217902499-byi",
@@ -9709,7 +10104,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:42.499Z",
-      "updatedAt": "2026-10-05T17:44:19.475Z"
+      "updatedAt": "2026-10-05T17:44:19.475Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217903040-1v7",
@@ -9724,7 +10120,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:43.040Z",
-      "updatedAt": "2026-10-05T17:44:19.824Z"
+      "updatedAt": "2026-10-05T17:44:19.824Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217903458-mcl",
@@ -9739,7 +10136,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:43.458Z",
-      "updatedAt": "2026-10-05T17:44:20.150Z"
+      "updatedAt": "2026-10-05T17:44:20.150Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217903976-mgs",
@@ -9754,7 +10152,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:43.976Z",
-      "updatedAt": "2026-10-05T17:44:20.583Z"
+      "updatedAt": "2026-10-05T17:44:20.583Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791217904382-d0k",
@@ -9769,7 +10168,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T16:31:44.382Z",
-      "updatedAt": "2026-10-05T17:44:20.878Z"
+      "updatedAt": "2026-10-05T17:44:20.878Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791220774107-gg9",
@@ -9784,7 +10184,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:19:34.107Z",
-      "updatedAt": "2026-10-05T17:42:38.853Z"
+      "updatedAt": "2026-10-05T17:42:38.853Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791220831521-maw",
@@ -9799,7 +10200,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:20:31.521Z",
-      "updatedAt": "2026-10-05T17:42:38.975Z"
+      "updatedAt": "2026-10-05T17:42:38.975Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791221133592-izx",
@@ -9814,7 +10216,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:25:33.592Z",
-      "updatedAt": "2026-10-05T17:42:39.274Z"
+      "updatedAt": "2026-10-05T17:42:39.274Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222138664-3fv",
@@ -9829,7 +10232,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:42:18.664Z",
-      "updatedAt": "2026-10-06T01:56:03.547Z"
+      "updatedAt": "2026-10-06T01:56:03.547Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222284824-sq9",
@@ -9844,7 +10248,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:44.824Z",
-      "updatedAt": "2026-10-06T01:42:40.241Z"
+      "updatedAt": "2026-10-06T01:42:40.241Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222285150-78e",
@@ -9859,7 +10264,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:45.150Z",
-      "updatedAt": "2026-10-06T01:55:33.483Z"
+      "updatedAt": "2026-10-06T01:55:33.483Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222285447-xi7",
@@ -9874,7 +10280,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:45.447Z",
-      "updatedAt": "2026-10-06T01:55:44.193Z"
+      "updatedAt": "2026-10-06T01:55:44.193Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222285725-kwp",
@@ -9889,7 +10296,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:45.725Z",
-      "updatedAt": "2026-10-06T01:55:45.590Z"
+      "updatedAt": "2026-10-06T01:55:45.590Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222286074-5ic",
@@ -9904,7 +10312,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:46.074Z",
-      "updatedAt": "2026-10-06T01:55:50.734Z"
+      "updatedAt": "2026-10-06T01:55:50.734Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222286389-zzy",
@@ -9919,7 +10328,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:46.389Z",
-      "updatedAt": "2026-10-06T01:55:54.102Z"
+      "updatedAt": "2026-10-06T01:55:54.102Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222286662-2md",
@@ -9935,7 +10345,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T17:44:46.662Z",
       "updatedAt": "2026-10-06T03:38:04.066Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222286968-4dg",
@@ -9951,7 +10362,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T17:44:46.968Z",
       "updatedAt": "2026-10-06T03:35:56.147Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222287366-2mb",
@@ -9967,7 +10379,8 @@
       "status": "Active",
       "createdAt": "2026-10-05T17:44:47.366Z",
       "updatedAt": "2026-10-06T03:35:45.853Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222287698-1p7",
@@ -9982,7 +10395,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-05T17:44:47.698Z",
-      "updatedAt": "2026-10-06T01:56:07.392Z"
+      "updatedAt": "2026-10-06T01:56:07.392Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222288025-ol0",
@@ -9998,7 +10412,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:48.025Z",
       "updatedAt": "2026-10-06T03:43:06.726Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222288376-j5s",
@@ -10014,7 +10429,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:48.376Z",
       "updatedAt": "2026-10-06T03:47:47.135Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222288735-rm7",
@@ -10030,7 +10446,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:48.735Z",
       "updatedAt": "2026-10-06T03:47:54.448Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222289182-546",
@@ -10046,7 +10463,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:49.182Z",
       "updatedAt": "2026-10-06T03:46:33.609Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222289565-1kc",
@@ -10062,7 +10480,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:49.565Z",
       "updatedAt": "2026-10-06T03:46:41.854Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222289960-pad",
@@ -10078,7 +10497,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:49.960Z",
       "updatedAt": "2026-10-06T03:48:56.564Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222290358-uly",
@@ -10094,7 +10514,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:50.358Z",
       "updatedAt": "2026-10-06T03:49:05.718Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222290872-4q4",
@@ -10109,7 +10530,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:50.872Z",
-      "updatedAt": "2026-10-05T17:44:50.872Z"
+      "updatedAt": "2026-10-05T17:44:50.872Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222291374-ll2",
@@ -10124,7 +10546,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:51.374Z",
-      "updatedAt": "2026-10-05T17:44:51.374Z"
+      "updatedAt": "2026-10-05T17:44:51.374Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222291785-un5",
@@ -10140,7 +10563,8 @@
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:51.785Z",
       "updatedAt": "2026-10-06T04:10:17.158Z",
-      "variantAttributes": {}
+      "variantAttributes": {},
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222292157-gqx",
@@ -10157,7 +10581,8 @@
       "createdAt": "2026-10-05T17:44:52.157Z",
       "updatedAt": "2026-10-06T08:01:02.974Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222292534-4vk",
@@ -10174,7 +10599,8 @@
       "createdAt": "2026-10-05T17:44:52.534Z",
       "updatedAt": "2026-10-06T08:04:05.613Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222292869-8m8",
@@ -10191,7 +10617,8 @@
       "createdAt": "2026-10-05T17:44:52.869Z",
       "updatedAt": "2026-10-06T08:02:22.027Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222293194-tk3",
@@ -10208,7 +10635,8 @@
       "createdAt": "2026-10-05T17:44:53.194Z",
       "updatedAt": "2026-10-06T08:06:29.245Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222293594-5jf",
@@ -10225,7 +10653,8 @@
       "createdAt": "2026-10-05T17:44:53.594Z",
       "updatedAt": "2026-10-06T08:10:10.199Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222293980-7ai",
@@ -10242,7 +10671,8 @@
       "createdAt": "2026-10-05T17:44:53.980Z",
       "updatedAt": "2026-10-06T08:15:20.242Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222294512-bjt",
@@ -10259,7 +10689,8 @@
       "createdAt": "2026-10-05T17:44:54.512Z",
       "updatedAt": "2026-10-06T08:18:19.230Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222294859-ter",
@@ -10274,7 +10705,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:54.859Z",
-      "updatedAt": "2026-10-05T17:44:54.859Z"
+      "updatedAt": "2026-10-05T17:44:54.859Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222295177-qzv",
@@ -10289,7 +10721,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:55.177Z",
-      "updatedAt": "2026-10-05T17:44:55.177Z"
+      "updatedAt": "2026-10-05T17:44:55.177Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222295530-7l5",
@@ -10304,7 +10737,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:55.530Z",
-      "updatedAt": "2026-10-05T17:44:55.530Z"
+      "updatedAt": "2026-10-05T17:44:55.530Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222295878-a8c",
@@ -10319,7 +10753,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:55.878Z",
-      "updatedAt": "2026-10-05T17:44:55.878Z"
+      "updatedAt": "2026-10-05T17:44:55.878Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222296268-ier",
@@ -10334,7 +10769,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:56.268Z",
-      "updatedAt": "2026-10-05T17:44:56.268Z"
+      "updatedAt": "2026-10-05T17:44:56.268Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222296628-56h",
@@ -10349,7 +10785,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:56.628Z",
-      "updatedAt": "2026-10-05T17:44:56.628Z"
+      "updatedAt": "2026-10-05T17:44:56.628Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222296999-eqi",
@@ -10364,7 +10801,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:56.999Z",
-      "updatedAt": "2026-10-05T17:44:56.999Z"
+      "updatedAt": "2026-10-05T17:44:56.999Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222297456-q7y",
@@ -10379,7 +10817,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:57.456Z",
-      "updatedAt": "2026-10-05T17:44:57.456Z"
+      "updatedAt": "2026-10-05T17:44:57.456Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222297926-57u",
@@ -10394,7 +10833,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:57.926Z",
-      "updatedAt": "2026-10-05T17:44:57.926Z"
+      "updatedAt": "2026-10-05T17:44:57.926Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222298368-k0r",
@@ -10409,7 +10849,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:58.368Z",
-      "updatedAt": "2026-10-05T17:44:58.368Z"
+      "updatedAt": "2026-10-05T17:44:58.368Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222299928-zbt",
@@ -10424,7 +10865,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:44:59.928Z",
-      "updatedAt": "2026-10-05T17:44:59.928Z"
+      "updatedAt": "2026-10-05T17:44:59.928Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222300588-e5j",
@@ -10439,7 +10881,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:00.588Z",
-      "updatedAt": "2026-10-05T17:45:00.588Z"
+      "updatedAt": "2026-10-05T17:45:00.588Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222301301-tgt",
@@ -10454,7 +10897,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:01.301Z",
-      "updatedAt": "2026-10-05T17:45:01.301Z"
+      "updatedAt": "2026-10-05T17:45:01.301Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222301872-if4",
@@ -10469,7 +10913,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:01.872Z",
-      "updatedAt": "2026-10-05T17:45:01.872Z"
+      "updatedAt": "2026-10-05T17:45:01.872Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222302321-ezb",
@@ -10484,7 +10929,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:02.321Z",
-      "updatedAt": "2026-10-05T17:45:02.321Z"
+      "updatedAt": "2026-10-05T17:45:02.321Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222302793-req",
@@ -10499,7 +10945,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:02.793Z",
-      "updatedAt": "2026-10-05T17:45:02.793Z"
+      "updatedAt": "2026-10-05T17:45:02.793Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222303459-4q7",
@@ -10514,7 +10961,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:03.459Z",
-      "updatedAt": "2026-10-05T17:45:03.459Z"
+      "updatedAt": "2026-10-05T17:45:03.459Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222303919-yr9",
@@ -10529,7 +10977,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:03.919Z",
-      "updatedAt": "2026-10-05T17:45:03.919Z"
+      "updatedAt": "2026-10-05T17:45:03.919Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222304443-lj3",
@@ -10544,7 +10993,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:04.443Z",
-      "updatedAt": "2026-10-05T17:45:04.443Z"
+      "updatedAt": "2026-10-05T17:45:04.443Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222305944-owx",
@@ -10559,7 +11009,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:05.943Z",
-      "updatedAt": "2026-10-05T17:45:05.943Z"
+      "updatedAt": "2026-10-05T17:45:05.943Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222306806-awy",
@@ -10574,7 +11025,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:06.806Z",
-      "updatedAt": "2026-10-05T17:45:06.806Z"
+      "updatedAt": "2026-10-05T17:45:06.806Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222307527-y5x",
@@ -10589,7 +11041,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:07.527Z",
-      "updatedAt": "2026-10-05T17:45:07.527Z"
+      "updatedAt": "2026-10-05T17:45:07.527Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222308173-c9p",
@@ -10604,7 +11057,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:08.173Z",
-      "updatedAt": "2026-10-05T17:45:08.173Z"
+      "updatedAt": "2026-10-05T17:45:08.173Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222308862-ozl",
@@ -10621,7 +11075,8 @@
       "createdAt": "2026-10-05T17:45:08.862Z",
       "updatedAt": "2026-10-06T08:39:14.929Z",
       "variantAttributes": {},
-      "mrp": 0
+      "mrp": 0,
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222309498-3oc",
@@ -10636,7 +11091,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:09.498Z",
-      "updatedAt": "2026-10-05T17:45:09.498Z"
+      "updatedAt": "2026-10-05T17:45:09.498Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222310282-9fd",
@@ -10651,7 +11107,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:10.282Z",
-      "updatedAt": "2026-10-05T17:45:10.282Z"
+      "updatedAt": "2026-10-05T17:45:10.282Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222311137-3f7",
@@ -10666,7 +11123,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:11.137Z",
-      "updatedAt": "2026-10-05T17:45:11.137Z"
+      "updatedAt": "2026-10-05T17:45:11.137Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222311577-y7d",
@@ -10681,7 +11139,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:11.576Z",
-      "updatedAt": "2026-10-05T17:45:11.576Z"
+      "updatedAt": "2026-10-05T17:45:11.576Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222311992-ql9",
@@ -10696,7 +11155,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:11.992Z",
-      "updatedAt": "2026-10-05T17:45:11.992Z"
+      "updatedAt": "2026-10-05T17:45:11.992Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222312629-zp0",
@@ -10711,7 +11171,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:12.629Z",
-      "updatedAt": "2026-10-05T17:45:12.629Z"
+      "updatedAt": "2026-10-05T17:45:12.629Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222313395-h2q",
@@ -10726,7 +11187,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:13.395Z",
-      "updatedAt": "2026-10-05T17:45:13.395Z"
+      "updatedAt": "2026-10-05T17:45:13.395Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222314161-28q",
@@ -10741,7 +11203,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:14.161Z",
-      "updatedAt": "2026-10-05T17:45:14.161Z"
+      "updatedAt": "2026-10-05T17:45:14.161Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222314706-ak7",
@@ -10756,7 +11219,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:14.706Z",
-      "updatedAt": "2026-10-05T17:45:14.706Z"
+      "updatedAt": "2026-10-05T17:45:14.706Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222315343-oi9",
@@ -10771,7 +11235,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:15.343Z",
-      "updatedAt": "2026-10-05T17:45:15.343Z"
+      "updatedAt": "2026-10-05T17:45:15.343Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222316181-tvp",
@@ -10786,7 +11251,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:16.181Z",
-      "updatedAt": "2026-10-05T17:45:16.181Z"
+      "updatedAt": "2026-10-05T17:45:16.181Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222317094-7p7",
@@ -10801,7 +11267,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:17.094Z",
-      "updatedAt": "2026-10-05T17:45:17.094Z"
+      "updatedAt": "2026-10-05T17:45:17.094Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222317584-6x6",
@@ -10816,7 +11283,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:17.584Z",
-      "updatedAt": "2026-10-05T17:45:17.584Z"
+      "updatedAt": "2026-10-05T17:45:17.584Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222318080-tfy",
@@ -10831,7 +11299,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:18.080Z",
-      "updatedAt": "2026-10-05T17:45:18.080Z"
+      "updatedAt": "2026-10-05T17:45:18.080Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222318599-6yn",
@@ -10846,7 +11315,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:18.599Z",
-      "updatedAt": "2026-10-05T17:45:18.599Z"
+      "updatedAt": "2026-10-05T17:45:18.599Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222319626-3yt",
@@ -10861,7 +11331,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:19.626Z",
-      "updatedAt": "2026-10-05T17:45:19.626Z"
+      "updatedAt": "2026-10-05T17:45:19.626Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222320250-1p2",
@@ -10876,7 +11347,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:20.250Z",
-      "updatedAt": "2026-10-05T17:45:20.250Z"
+      "updatedAt": "2026-10-05T17:45:20.250Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222320696-w5r",
@@ -10891,7 +11363,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:20.696Z",
-      "updatedAt": "2026-10-05T17:45:20.696Z"
+      "updatedAt": "2026-10-05T17:45:20.696Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222321347-6fo",
@@ -10906,7 +11379,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:21.347Z",
-      "updatedAt": "2026-10-05T17:45:21.347Z"
+      "updatedAt": "2026-10-05T17:45:21.347Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222322160-8no",
@@ -10921,7 +11395,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:22.160Z",
-      "updatedAt": "2026-10-05T17:45:22.160Z"
+      "updatedAt": "2026-10-05T17:45:22.160Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222322779-ope",
@@ -10936,7 +11411,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:22.779Z",
-      "updatedAt": "2026-10-05T17:45:22.779Z"
+      "updatedAt": "2026-10-05T17:45:22.779Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222323149-jmd",
@@ -10951,7 +11427,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:23.149Z",
-      "updatedAt": "2026-10-05T17:45:23.149Z"
+      "updatedAt": "2026-10-05T17:45:23.149Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222323537-fua",
@@ -10966,7 +11443,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:23.537Z",
-      "updatedAt": "2026-10-05T17:45:23.537Z"
+      "updatedAt": "2026-10-05T17:45:23.537Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222323962-7cn",
@@ -10981,7 +11459,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:23.962Z",
-      "updatedAt": "2026-10-05T17:45:23.962Z"
+      "updatedAt": "2026-10-05T17:45:23.962Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222324402-267",
@@ -10996,7 +11475,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:24.402Z",
-      "updatedAt": "2026-10-05T17:45:24.402Z"
+      "updatedAt": "2026-10-05T17:45:24.402Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222325128-25b",
@@ -11011,7 +11491,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:25.128Z",
-      "updatedAt": "2026-10-05T17:45:25.128Z"
+      "updatedAt": "2026-10-05T17:45:25.128Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222325821-gqc",
@@ -11026,7 +11507,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:25.821Z",
-      "updatedAt": "2026-10-05T17:45:25.821Z"
+      "updatedAt": "2026-10-05T17:45:25.821Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222326668-t45",
@@ -11041,7 +11523,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:26.667Z",
-      "updatedAt": "2026-10-05T17:45:26.667Z"
+      "updatedAt": "2026-10-05T17:45:26.667Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222327317-v47",
@@ -11056,7 +11539,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:27.317Z",
-      "updatedAt": "2026-10-05T17:45:27.317Z"
+      "updatedAt": "2026-10-05T17:45:27.317Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222327887-rur",
@@ -11071,7 +11555,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:27.887Z",
-      "updatedAt": "2026-10-05T17:45:27.887Z"
+      "updatedAt": "2026-10-05T17:45:27.887Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222328922-j1i",
@@ -11086,7 +11571,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:28.922Z",
-      "updatedAt": "2026-10-05T17:45:28.922Z"
+      "updatedAt": "2026-10-05T17:45:28.922Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222329893-q2r",
@@ -11101,7 +11587,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:29.892Z",
-      "updatedAt": "2026-10-05T17:45:29.892Z"
+      "updatedAt": "2026-10-05T17:45:29.892Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222330355-emu",
@@ -11116,7 +11603,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:30.355Z",
-      "updatedAt": "2026-10-05T17:45:30.355Z"
+      "updatedAt": "2026-10-05T17:45:30.355Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222330853-zt0",
@@ -11131,7 +11619,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:30.853Z",
-      "updatedAt": "2026-10-05T17:45:30.853Z"
+      "updatedAt": "2026-10-05T17:45:30.853Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222331532-y6v",
@@ -11146,7 +11635,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:31.532Z",
-      "updatedAt": "2026-10-05T17:45:31.532Z"
+      "updatedAt": "2026-10-05T17:45:31.532Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222332201-2f3",
@@ -11161,7 +11651,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:32.201Z",
-      "updatedAt": "2026-10-05T17:45:32.201Z"
+      "updatedAt": "2026-10-05T17:45:32.201Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222333649-d5q",
@@ -11176,7 +11667,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:33.649Z",
-      "updatedAt": "2026-10-05T17:45:33.649Z"
+      "updatedAt": "2026-10-05T17:45:33.649Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222335093-vuz",
@@ -11191,7 +11683,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:35.093Z",
-      "updatedAt": "2026-10-05T17:45:35.093Z"
+      "updatedAt": "2026-10-05T17:45:35.093Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222336204-dtn",
@@ -11206,7 +11699,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:36.203Z",
-      "updatedAt": "2026-10-05T17:45:36.203Z"
+      "updatedAt": "2026-10-05T17:45:36.203Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222337852-k84",
@@ -11221,7 +11715,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:37.852Z",
-      "updatedAt": "2026-10-05T17:45:37.852Z"
+      "updatedAt": "2026-10-05T17:45:37.852Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222339692-j2t",
@@ -11236,7 +11731,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:39.692Z",
-      "updatedAt": "2026-10-05T17:45:39.692Z"
+      "updatedAt": "2026-10-05T17:45:39.692Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222340727-8ag",
@@ -11251,7 +11747,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:40.727Z",
-      "updatedAt": "2026-10-05T17:45:40.727Z"
+      "updatedAt": "2026-10-05T17:45:40.727Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222341856-8t3",
@@ -11266,7 +11763,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:41.856Z",
-      "updatedAt": "2026-10-05T17:45:41.856Z"
+      "updatedAt": "2026-10-05T17:45:41.856Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222343966-euv",
@@ -11281,7 +11779,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:43.966Z",
-      "updatedAt": "2026-10-05T17:45:43.966Z"
+      "updatedAt": "2026-10-05T17:45:43.966Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222345410-g89",
@@ -11296,7 +11795,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:45.410Z",
-      "updatedAt": "2026-10-05T17:45:45.410Z"
+      "updatedAt": "2026-10-05T17:45:45.410Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222346587-tyv",
@@ -11311,7 +11811,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:46.587Z",
-      "updatedAt": "2026-10-05T17:45:46.587Z"
+      "updatedAt": "2026-10-05T17:45:46.587Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222347366-4u2",
@@ -11326,7 +11827,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:47.366Z",
-      "updatedAt": "2026-10-05T17:45:47.366Z"
+      "updatedAt": "2026-10-05T17:45:47.366Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791222348321-ehx",
@@ -11341,7 +11843,8 @@
       "specifications": "",
       "status": "Inactive",
       "createdAt": "2026-10-05T17:45:48.321Z",
-      "updatedAt": "2026-10-05T17:45:48.321Z"
+      "updatedAt": "2026-10-05T17:45:48.321Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791253698950-ceh",
@@ -11362,7 +11865,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-06T02:28:18.950Z",
-      "updatedAt": "2026-10-06T02:29:18.092Z"
+      "updatedAt": "2026-10-06T02:29:18.092Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791253986056-mhw",
@@ -11383,7 +11887,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-06T02:33:06.055Z",
-      "updatedAt": "2026-10-06T02:33:06.055Z"
+      "updatedAt": "2026-10-06T02:33:06.055Z",
+      "minimumOrderQuantity": 1
     },
     {
       "id": "prd-1791292589867-nrn",
@@ -11400,7 +11905,8 @@
       "specifications": "",
       "status": "Active",
       "createdAt": "2026-10-06T13:16:29.867Z",
-      "updatedAt": "2026-10-06T13:16:29.867Z"
+      "updatedAt": "2026-10-06T13:16:29.867Z",
+      "minimumOrderQuantity": 1
     }
   ],
   "stock": [
@@ -13635,6 +14141,15 @@
       "lowStockThreshold": 10,
       "updatedBy": "CW-ADMIN",
       "updatedAt": "2026-10-05T17:44:10.524Z"
+    },
+    {
+      "id": "stk-1791217523444-2cp",
+      "productId": "prd-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "quantity": 591,
+      "lowStockThreshold": 10,
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-06T06:32:59.343Z"
     },
     {
       "id": "stk-1791217524086-wzn",
@@ -17711,6 +18226,15 @@
       "updatedAt": "2026-10-05T17:44:10.524Z"
     },
     {
+      "id": "prc-1791217523444-2cp",
+      "productId": "prd-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "fpPrice": 37.95,
+      "currency": "INR",
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-06T06:32:59.343Z"
+    },
+    {
       "id": "prc-1791217524086-wzn",
       "productId": "prd-1791217524086-wzn",
       "skuCode": "SHI-001",
@@ -21772,6 +22296,15 @@
       "updatedAt": "2026-10-05T17:44:10.524Z"
     },
     {
+      "id": "gst-1791217523444-2cp",
+      "productId": "prd-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "gstPercentage": 5,
+      "hsnCode": "",
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-06T06:32:59.343Z"
+    },
+    {
       "id": "gst-1791217524086-wzn",
       "productId": "prd-1791217524086-wzn",
       "skuCode": "SHI-001",
@@ -23613,22 +24146,22 @@
   },
   "audit_logs": [
     {
-      "id": "aud-1793777556140-sexj",
+      "id": "aud-1793946779343-tjbl",
       "actorUserId": "CW-ADMIN",
       "actorName": "Cycle World Super Admin",
       "actorRole": "SUPER_ADMIN",
-      "actionType": "DELETE_CUSTOMER",
-      "entityType": "CUSTOMER",
-      "entityId": "cust-1793601353043-7u0",
-      "skuCode": null,
-      "fieldChanged": "record",
-      "previousValue": "test@gmail.com - test",
-      "newValue": "DELETED",
-      "description": "Deleted customer store account \"test\" (Login ID: test@gmail.com).",
-      "createdAt": "2026-11-04T07:32:36.140Z"
+      "actionType": "UPDATE_PRODUCT",
+      "entityType": "PRODUCT",
+      "entityId": "prd-1791217523444-2cp",
+      "skuCode": "SQR-002",
+      "fieldChanged": "minimumOrderQuantity",
+      "previousValue": "1",
+      "newValue": "3",
+      "description": "Updated minimum order quantity for SKU SQR-002 from 1 to 3.",
+      "createdAt": "2026-11-06T06:32:59.343Z"
     },
     {
-      "id": "aud-1793609267483-2nzk",
+      "id": "aud-1793946768018-ni3e",
       "actorUserId": "CW-ADMIN",
       "actorName": "Cycle World Super Admin",
       "actorRole": "SUPER_ADMIN",
@@ -23640,37 +24173,52 @@
       "previousValue": "SQR-001 - ALLOY SEAT QUICK RELEASE 28.58MM",
       "newValue": "DELETED",
       "description": "Permanently deleted product SQR-001 (\"ALLOY SEAT QUICK RELEASE 28.58MM\").",
-      "createdAt": "2026-11-02T08:47:47.483Z"
+      "createdAt": "2026-11-06T06:32:48.018Z"
     },
     {
-      "id": "aud-1793604193203-6bba",
+      "id": "aud-1793946739687-o23q",
       "actorUserId": "CW-ADMIN",
       "actorName": "Cycle World Super Admin",
       "actorRole": "SUPER_ADMIN",
-      "actionType": "DELETE_PRODUCT",
+      "actionType": "UPDATE_PRODUCT",
       "entityType": "PRODUCT",
-      "entityId": "prd-1791217523444-2cp",
-      "skuCode": "SQR-002",
-      "fieldChanged": "record",
-      "previousValue": "SQR-002 - ALLOY SEAT QUICK RELEASE BLACK 31.8MM",
-      "newValue": "DELETED",
-      "description": "Permanently deleted product SQR-002 (\"ALLOY SEAT QUICK RELEASE BLACK 31.8MM\").",
-      "createdAt": "2026-11-02T07:23:13.203Z"
+      "entityId": "prd-1791217523203-5ci",
+      "skuCode": "SQR-001",
+      "fieldChanged": "minimumOrderQuantity",
+      "previousValue": "5",
+      "newValue": "3",
+      "description": "Updated minimum order quantity for SKU SQR-001 from 5 to 3.",
+      "createdAt": "2026-11-06T06:32:19.687Z"
     },
     {
-      "id": "aud-1793601353043-ze1v",
+      "id": "aud-1793946466523-mxxf",
       "actorUserId": "CW-ADMIN",
       "actorName": "Cycle World Super Admin",
       "actorRole": "SUPER_ADMIN",
       "actionType": "CREATE_CUSTOMER",
       "entityType": "CUSTOMER",
-      "entityId": "cust-1793601353043-7u0",
+      "entityId": "cust-1793946466523-4qr",
       "skuCode": null,
       "fieldChanged": "customerCode",
       "previousValue": "NONE",
-      "newValue": "test@gmail.com - test",
-      "description": "Created customer login credentials for \"test\" (Login ID: test@gmail.com).",
-      "createdAt": "2026-11-02T06:35:53.043Z"
+      "newValue": "test@mail.com - test",
+      "description": "Created customer login credentials for \"test\" (Login ID: test@mail.com).",
+      "createdAt": "2026-11-06T06:27:46.523Z"
+    },
+    {
+      "id": "aud-1793946431896-97d9",
+      "actorUserId": "CW-ADMIN",
+      "actorName": "Cycle World Super Admin",
+      "actorRole": "SUPER_ADMIN",
+      "actionType": "UPDATE_PRODUCT",
+      "entityType": "PRODUCT",
+      "entityId": "prd-1791217523203-5ci",
+      "skuCode": "SQR-001",
+      "fieldChanged": "minimumOrderQuantity",
+      "previousValue": "1",
+      "newValue": "5",
+      "description": "Updated minimum order quantity for SKU SQR-001 from 1 to 5.",
+      "createdAt": "2026-11-06T06:27:11.896Z"
     },
     {
       "id": "aud-1793122726706-kux8",
@@ -25096,21 +25644,6 @@
       "newValue": "SKU: TOO-015 | Name: TOOLS-SPANNER 13H | FP: ₹15.95 | Stock: 0 | GST: 5%",
       "description": "Created new product \"TOOLS-SPANNER 13H\" with manually assigned SKU TOO-015.",
       "createdAt": "2026-10-05T17:45:43.966Z"
-    },
-    {
-      "id": "aud-1791222341856-3apw",
-      "actorUserId": "CW-ADMIN",
-      "actorName": "Cycle World Super Admin",
-      "actorRole": "SUPER_ADMIN",
-      "actionType": "CREATE_PRODUCT",
-      "entityType": "PRODUCT",
-      "entityId": "prd-1791222341856-8t3",
-      "skuCode": "TOO-014",
-      "fieldChanged": "ALL",
-      "previousValue": "NONE",
-      "newValue": "SKU: TOO-014 | Name: TOOLS-PEDAL SPANNER | FP: ₹76.83 | Stock: 0 | GST: 5%",
-      "description": "Created new product \"TOOLS-PEDAL SPANNER\" with manually assigned SKU TOO-014.",
-      "createdAt": "2026-10-05T17:45:41.856Z"
     }
   ],
   "subcategory_groups": [
