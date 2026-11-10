@@ -1041,9 +1041,7 @@
             </button>
           </form>
 
-          <div class="login-policy-note">
-            Master Admin ID: <span class="mono">CW-ADMIN</span> &nbsp;|&nbsp; Initial Password: <span class="mono">Admin@123</span>
-          </div>
+          
         </div>
       </main>
     `;
