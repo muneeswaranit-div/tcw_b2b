@@ -17,10 +17,10 @@ A complete, role-isolated B2B wholesale e-commerce and order processing system b
 1. In hPanel, create a **Node.js Web App** and select Node.js 18 or newer.
 2. Upload the project files so `server.js`, `package.json`, `index.html`, `js/`, `css/`, `IMAGES/`, and `database/` are in the application root. Keep the existing directory and filename capitalization exactly as-is; Linux paths are case-sensitive.
 3. Set the application root to that directory and the startup file to `server.js`. Install dependencies from the hPanel Node.js app page (this project currently has no external npm dependencies), then start/restart the application. The server listens on Hostinger's `PORT` environment variable and binds to `0.0.0.0`.
-4. Ensure the application can write to `database/cycleworld_db.json`. For deployments where application files may be replaced during updates, set the hPanel environment variable `DATABASE_FILE` to an absolute path in a persistent, writable directory in your hosting account; the server creates the parent directory when saving.
+4. On Linux, the server stores records by default at `~/.cycleworld-b2b/cycleworld_db.json`, outside the Git-deployed application directory, so pushing code updates does not replace the live database. On its first start, it copies `database/cycleworld_db.json` to this persistent location if that file exists and no persistent database has been created yet. Ensure the hosting account can write to its home directory. You may instead set the hPanel environment variable `DATABASE_FILE` to an absolute path in a persistent, writable directory; do not point it inside the Git-deployed application directory.
 5. Connect your domain to the Node.js app in hPanel and enable its SSL certificate. After startup, open `/api/health` on your domain and confirm it returns `{"status":"ok",...}`.
 
-The Windows `.bat`, `.ps1`, and `.vbs` launchers are only for running the project on Windows; hPanel starts the Node.js application directly. Back up the configured database file regularly.
+The Windows `.bat`, `.ps1`, and `.vbs` launchers are only for running the project on Windows; hPanel starts the Node.js application directly. Back up the configured database file regularly. This persistence requires the Node.js app/server to handle the website and `/api/db` requests; static-only hosting cannot save shared records to the server.
 
 ---
 

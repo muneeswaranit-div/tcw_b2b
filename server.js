@@ -9,15 +9,30 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 const ROOT_DIR = __dirname;
-const PORT = Number.parseInt(process.env.PORT || '8080', 10);
+const PORT = Number.parseInt(process.env.PORT || '8081', 10);
+const LEGACY_DB_FILE_PATH = path.join(ROOT_DIR, 'database', 'cycleworld_db.json');
 const DB_FILE_PATH = path.resolve(
-  process.env.DATABASE_FILE || path.join(ROOT_DIR, 'database', 'cycleworld_db.json')
+  process.env.DATABASE_FILE ||
+    (process.platform === 'win32'
+      ? LEGACY_DB_FILE_PATH
+      : path.join(os.homedir(), '.cycleworld-b2b', 'cycleworld_db.json'))
 );
 
 if (!Number.isInteger(PORT) || PORT < 1 || PORT > 65535) {
   throw new Error('PORT must be an integer between 1 and 65535.');
+}
+
+if (
+  DB_FILE_PATH !== LEGACY_DB_FILE_PATH &&
+  !fs.existsSync(DB_FILE_PATH) &&
+  fs.existsSync(LEGACY_DB_FILE_PATH)
+) {
+  fs.mkdirSync(path.dirname(DB_FILE_PATH), { recursive: true });
+  fs.copyFileSync(LEGACY_DB_FILE_PATH, DB_FILE_PATH);
+  console.log(`Migrated existing database to persistent storage: ${DB_FILE_PATH}`);
 }
 
 const MIME_TYPES = {
