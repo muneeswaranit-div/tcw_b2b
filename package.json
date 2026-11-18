@@ -7,7 +7,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "migrate:legacy": "node database/migrate-json-to-mysql.js"
   },
   "keywords": [
     "cycle-world",
@@ -17,5 +18,9 @@
     "gst-billing",
     "rbac"
   ],
-  "license": "Proprietary"
+  "license": "Proprietary",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.14.1"
+  }
 }

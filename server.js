@@ -1,38 +1,15 @@
-/**
- * ============================================================================
- * CYCLE WORLD (TCW B2B) - PRODUCTION NODE.JS BACKEND SERVER
- * ============================================================================
- * Provides HTTP static hosting and persistent relational JSON database storage.
- * ============================================================================
- */
+require('dotenv').config();
 
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const os = require('os');
+const { createPool, ensureSchema, loadState, saveState } = require('./database/mysql-store');
 
 const ROOT_DIR = __dirname;
 const PORT = Number.parseInt(process.env.PORT || '8081', 10);
-const LEGACY_DB_FILE_PATH = path.join(ROOT_DIR, 'database', 'cycleworld_db.json');
-const DB_FILE_PATH = path.resolve(
-  process.env.DATABASE_FILE ||
-    (process.platform === 'win32'
-      ? LEGACY_DB_FILE_PATH
-      : path.join(os.homedir(), '.cycleworld-b2b', 'cycleworld_db.json'))
-);
 
 if (!Number.isInteger(PORT) || PORT < 1 || PORT > 65535) {
   throw new Error('PORT must be an integer between 1 and 65535.');
-}
-
-if (
-  DB_FILE_PATH !== LEGACY_DB_FILE_PATH &&
-  !fs.existsSync(DB_FILE_PATH) &&
-  fs.existsSync(LEGACY_DB_FILE_PATH)
-) {
-  fs.mkdirSync(path.dirname(DB_FILE_PATH), { recursive: true });
-  fs.copyFileSync(LEGACY_DB_FILE_PATH, DB_FILE_PATH);
-  console.log(`Migrated existing database to persistent storage: ${DB_FILE_PATH}`);
 }
 
 const MIME_TYPES = {
@@ -50,20 +27,63 @@ const MIME_TYPES = {
   '.pdf': 'application/pdf'
 };
 
+function sendJson(res, statusCode, body) {
+  res.writeHead(statusCode, {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store'
+  });
+  res.end(JSON.stringify(body));
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let data = '';
+    let tooLarge = false;
     req.on('data', (chunk) => {
+      if (tooLarge) return;
       data += chunk;
       if (data.length > 25 * 1024 * 1024) {
-        reject(new Error('Payload too large'));
+        tooLarge = true;
+        data = '';
       }
     });
-    req.on('end', () => resolve(data));
+    req.on('end', () => {
+      if (tooLarge) {
+        const err = new Error('Payload too large');
+        err.statusCode = 413;
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
     req.on('error', reject);
   });
 }
 
+function isValidDatabaseState(state) {
+  return (
+    state &&
+    typeof state === 'object' &&
+    state.meta &&
+    state.meta.schemaVersion === '2.0.0-clean' &&
+    Array.isArray(state.products) &&
+    Array.isArray(state.users)
+  );
+}
+
+function isPrivateStaticPath(relativePath) {
+  const normalized = relativePath.split(path.sep).join('/').toLowerCase();
+  return (
+    normalized === '.env' ||
+    normalized.startsWith('.git/') ||
+    normalized.startsWith('node_modules/') ||
+    normalized === 'js/preloaded-db.js' ||
+    normalized === 'database/cycleworld_db.json' ||
+    normalized === 'database/cycleworld_db.backup.json'
+  );
+}
+
+const pool = createPool();
 const server = http.createServer(async (req, res) => {
   let urlPath;
   try {
@@ -74,59 +94,59 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // API: Health Check
   if (urlPath === '/api/health' && req.method === 'GET') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ status: 'ok', service: 'Cycle World B2B Wholesale API' }));
-    return;
-  }
-
-  // API: Get Persisted Relational Database State
-  if (urlPath === '/api/db' && req.method === 'GET') {
-    if (fs.existsSync(DB_FILE_PATH)) {
-      const content = fs.readFileSync(DB_FILE_PATH, 'utf8');
-      res.writeHead(200, {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Cache-Control': 'no-store'
-      });
-      res.end(content);
-    } else {
-      res.writeHead(404, {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Cache-Control': 'no-store'
-      });
-      res.end(JSON.stringify({ initialized: false }));
+    try {
+      await pool.query('SELECT 1');
+      sendJson(res, 200, { status: 'ok', service: 'Cycle World B2B Wholesale API' });
+    } catch (err) {
+      console.error('MySQL health check failed:', err.message);
+      sendJson(res, 503, { status: 'unavailable', service: 'Cycle World B2B Wholesale API' });
     }
     return;
   }
 
-  // API: Sync & Persist Relational Database State
-  if (urlPath === '/api/sync-db' && req.method === 'POST') {
+  if (urlPath === '/api/db' && req.method === 'GET') {
     try {
-      const raw = await readBody(req);
-      const parsed = JSON.parse(raw);
-      if (!parsed || !Array.isArray(parsed.products) || !Array.isArray(parsed.users)) {
-        res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Invalid relational database payload' }));
+      const state = await loadState(pool);
+      if (!state) {
+        sendJson(res, 200, { initialized: false });
         return;
       }
-      fs.mkdirSync(path.dirname(DB_FILE_PATH), { recursive: true });
-      const temporaryPath = `${DB_FILE_PATH}.${process.pid}.tmp`;
-      fs.writeFileSync(temporaryPath, JSON.stringify(parsed, null, 2), 'utf8');
-      fs.renameSync(temporaryPath, DB_FILE_PATH);
-      res.writeHead(200, {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Cache-Control': 'no-store'
-      });
-      res.end(JSON.stringify({ saved: true, updatedAt: parsed.meta && parsed.meta.updatedAt }));
+      sendJson(res, 200, state);
     } catch (err) {
-      res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
-      res.end(JSON.stringify({ error: err.message }));
+      console.error('Unable to load application state from MySQL:', err.message);
+      sendJson(res, 503, { error: 'Unable to load application data from MySQL.' });
     }
     return;
   }
 
-  // Static File Serving
+  if (urlPath === '/api/sync-db' && req.method === 'POST') {
+    try {
+      const parsed = JSON.parse(await readBody(req));
+      if (!isValidDatabaseState(parsed)) {
+        sendJson(res, 400, { error: 'Invalid relational database payload.' });
+        return;
+      }
+      await saveState(pool, parsed);
+      sendJson(res, 200, {
+        saved: true,
+        updatedAt: parsed.meta.updatedAt
+      });
+    } catch (err) {
+      if (err.statusCode === 413) {
+        sendJson(res, 413, { error: 'Request body exceeds the 25 MB limit.' });
+        return;
+      }
+      if (err instanceof SyntaxError) {
+        sendJson(res, 400, { error: 'Request body must contain valid JSON.' });
+        return;
+      }
+      console.error('Unable to save application state to MySQL:', err.message);
+      sendJson(res, 503, { error: 'Unable to save application data to MySQL.' });
+    }
+    return;
+  }
+
   const safeRelPath = urlPath === '/' ? 'index.html' : urlPath.replace(/^\/+/, '');
   const absPath = path.resolve(ROOT_DIR, safeRelPath);
   const relativePath = path.relative(ROOT_DIR, absPath);
@@ -141,21 +161,50 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  if (fs.existsSync(absPath) && fs.statSync(absPath).isFile()) {
+  if (isPrivateStaticPath(relativePath)) {
+    res.writeHead(404);
+    res.end('404 Not Found');
+    return;
+  }
+
+  try {
+    const stat = await fs.promises.stat(absPath);
+    if (!stat.isFile()) {
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('404 Not Found');
+      return;
+    }
     const ext = path.extname(absPath).toLowerCase();
-    const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
+    res.writeHead(200, {
+      'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
+      'X-Content-Type-Options': 'nosniff'
+    });
     fs.createReadStream(absPath).pipe(res);
-  } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
+  } catch (err) {
+    if (err.code !== 'ENOENT') console.error('Unable to serve static file:', err.message);
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('404 Not Found');
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`============================================================`);
-  console.log(` Cycle World B2B Wholesale Portal running at:`);
-  console.log(` Port: ${PORT}`);
-  console.log(` Database: ${DB_FILE_PATH}`);
-  console.log(`============================================================`);
+async function start() {
+  await ensureSchema(pool);
+  await pool.query('SELECT 1');
+  server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Cycle World B2B server listening on port ${PORT} (MySQL storage).`);
+  });
+}
+
+start().catch(async (err) => {
+  console.error('Could not start the server. Check MySQL environment settings and connectivity.');
+  console.error(err.message);
+  await pool.end();
+  process.exitCode = 1;
 });
+
+for (const signal of ['SIGINT', 'SIGTERM']) {
+  process.on(signal, async () => {
+    server.close();
+    await pool.end();
+  });
+}

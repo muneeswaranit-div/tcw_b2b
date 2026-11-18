@@ -6,21 +6,25 @@ A complete, role-isolated B2B wholesale e-commerce and order processing system b
 
 ## Quick Start (Windows or Node.js)
 
-1. **Local browser**: Open `index.html` directly for a non-persistent/offline preview.
-2. **Local Windows server**: Use [`Start-CycleWorld-B2B.bat`](./Start-CycleWorld-B2B.bat) to start the Windows server ([`server.ps1`](./server.ps1)) on `http://localhost:8080`.
-3. **Node.js server**: Run `npm start` to serve the site and persist data to `database/cycleworld_db.json` (or set `DATABASE_FILE` to a writable file path).
+1. Install Node.js 18 or newer and MySQL access for the configured database.
+2. Copy `.env.example` to `.env` and set the MySQL connection values. Do not commit `.env`; database TLS is enabled by default.
+3. Install dependencies with `npm install`.
+4. If you need to keep existing records, run `npm run migrate:legacy` before first use. It does not replace an existing state snapshot; it preserves existing categories and company settings and merges audit logs within the app's 100-entry limit. If other tables already contain data without a state snapshot, it stops rather than replacing those rows.
+5. Start with `npm start` or use [`Start-CycleWorld-B2B.bat`](./Start-CycleWorld-B2B.bat). Open the URL printed by the launcher (by default `http://localhost:8090/`).
+
+Application data is synchronized to the MySQL tables in [`database/mysql-schema.sql`](./database/mysql-schema.sql), in the same transaction as the `tcw_application_state` snapshot used by the current client API. Application changes are not written to JSON files or browser local storage. Existing `database/cycleworld_db.json` files are only used by the one-time import command and are not served over HTTP. After verifying the import, remove the legacy JSON and preloaded snapshot from the deployed project.
 
 ## Deploy on Hostinger hPanel (Linux Node.js)
 
-**Before using real customer data:** the current `/api/db` and `/api/sync-db` endpoints do not require authentication. Do not expose this version publicly with sensitive business data until server-side authentication and authorization have been added.
-
 1. In hPanel, create a **Node.js Web App** and select Node.js 18 or newer.
-2. Upload the project files so `server.js`, `package.json`, `index.html`, `js/`, `css/`, `IMAGES/`, and `database/` are in the application root. Keep the existing directory and filename capitalization exactly as-is; Linux paths are case-sensitive.
-3. Set the application root to that directory and the startup file to `server.js`. Install dependencies from the hPanel Node.js app page (this project currently has no external npm dependencies), then start/restart the application. The server listens on Hostinger's `PORT` environment variable and binds to `0.0.0.0`.
-4. On Linux, the server stores records by default at `~/.cycleworld-b2b/cycleworld_db.json`, outside the Git-deployed application directory, so pushing code updates does not replace the live database. On its first start, it copies `database/cycleworld_db.json` to this persistent location if that file exists and no persistent database has been created yet. Ensure the hosting account can write to its home directory. You may instead set the hPanel environment variable `DATABASE_FILE` to an absolute path in a persistent, writable directory; do not point it inside the Git-deployed application directory.
-5. Connect your domain to the Node.js app in hPanel and enable its SSL certificate. After startup, open `/api/health` on your domain and confirm it returns `{"status":"ok",...}`.
+2. Set the application root to the project directory and the startup file to `server.js`. Install dependencies with `npm install`.
+3. Add `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` to the hPanel environment settings. Keep `DB_SSL=true` unless your provider explicitly requires a different TLS configuration. Never put production passwords in source files or commit `.env`.
+4. If migrating existing data, run `npm run migrate:legacy` once while the old JSON file is available and before anyone opens the new app. The command will not overwrite MySQL state that already exists.
+5. Start/restart the application, connect your domain, and enable its SSL certificate. Confirm `/api/health` returns `{"status":"ok",...}`.
 
-The Windows `.bat`, `.ps1`, and `.vbs` launchers are only for running the project on Windows; hPanel starts the Node.js application directly. Back up the configured database file regularly. This persistence requires the Node.js app/server to handle the website and `/api/db` requests; static-only hosting cannot save shared records to the server.
+The Windows launchers now run the same Node.js/MySQL server. Directly opening an HTML file is not supported for persistent changes.
+
+**Security limitation:** `/api/db` currently returns the full application state and `/api/sync-db` accepts a complete state update without server-side user authentication/authorization. Moving storage to MySQL protects the state file from being served, but does not fix that API access-control issue. Do not expose this version publicly with real customer data until server-side API authentication and role-level authorization are implemented.
 
 ---
 
@@ -45,9 +49,9 @@ The Windows `.bat`, `.ps1`, and `.vbs` launchers are only for running the projec
 
 ---
 
-## 🗄️ Normalized 16-Table Relational Database Structure
+## Application Data Model
 
-Defined in [`database/schema.sql`](./database/schema.sql) and enforced by [`js/database-engine.js`](./js/database-engine.js):
+The browser engine keeps these logical collections; the Node.js server stores them in MySQL tables and keeps a snapshot row for compatibility with the current API. The older [`database/schema.sql`](./database/schema.sql) is a SQLite-oriented schema draft; the MySQL schema is in [`database/mysql-schema.sql`](./database/mysql-schema.sql).
 
 1. `roles` — Role definitions & permission matrices
 2. `users` — Authentication principals with salted SHA-256 password hashes

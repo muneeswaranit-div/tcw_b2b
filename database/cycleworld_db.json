@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": "2.0.0-clean",
     "lastOrderSeq": 100,
-    "updatedAt": "2026-11-06T06:32:59.343Z"
+    "updatedAt": "2026-11-17T08:44:54.835Z"
   },
   "roles": [
     {
@@ -53,7 +53,7 @@
       "roleCode": "SUPER_ADMIN",
       "fullName": "Cycle World Super Admin",
       "status": "Active",
-      "lastLoginAt": "2026-11-06T06:31:35.007Z",
+      "lastLoginAt": "2026-11-17T08:44:54.835Z",
       "createdAt": "2026-10-05T13:47:39.926Z",
       "updatedAt": "2026-10-05T13:47:39.926Z"
     },
@@ -95,6 +95,19 @@
       "lastLoginAt": null,
       "createdAt": "2026-11-06T06:27:46.523Z",
       "updatedAt": "2026-11-06T06:27:46.523Z"
+    },
+    {
+      "id": "usr-cust-1794904387266-3s5",
+      "userId": "test3@mail.com",
+      "email": "test3@mail.com",
+      "passwordHash": "sha256$8304942e502cbda49a28d5772b95e75b0a6fbea8c9f16e1a8c4a6953d5633972",
+      "roleId": "role-customer-store",
+      "roleCode": "CUSTOMER",
+      "fullName": "test3",
+      "status": "Active",
+      "lastLoginAt": null,
+      "createdAt": "2026-11-17T08:33:07.266Z",
+      "updatedAt": "2026-11-17T08:33:07.266Z"
     }
   ],
   "customers": [
@@ -135,6 +148,25 @@
       "createdBy": "CW-ADMIN",
       "createdAt": "2026-11-06T06:27:46.523Z",
       "updatedAt": "2026-11-06T06:27:46.523Z"
+    },
+    {
+      "id": "cust-1794904387266-3s5",
+      "userId": "usr-cust-1794904387266-3s5",
+      "customerCode": "test3@mail.com",
+      "storeName": "test3",
+      "contactPerson": "",
+      "email": "test3@mail.com",
+      "phone": "9600765378",
+      "storeDetails": "",
+      "address": "Jaat Complex",
+      "city": "",
+      "state": "",
+      "pincode": "",
+      "gstNumber": "",
+      "status": "Active",
+      "createdBy": "CW-ADMIN",
+      "createdAt": "2026-11-17T08:33:07.266Z",
+      "updatedAt": "2026-11-17T08:33:07.266Z"
     }
   ],
   "employees": [
@@ -4561,6 +4593,14 @@
       "subcategoryId": "sub-1791217496541-nfz",
       "createdBy": "CW-ADMIN",
       "createdAt": "2026-10-06T13:16:29.867Z"
+    },
+    {
+      "id": "sku-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "categoryId": "cat-1791208230263-4nd",
+      "subcategoryId": "sub-1791208263822-xzv",
+      "createdBy": "CW-ADMIN",
+      "createdAt": "2026-11-17T08:36:27.620Z"
     }
   ],
   "products": [
@@ -11907,6 +11947,24 @@
       "createdAt": "2026-10-06T13:16:29.867Z",
       "updatedAt": "2026-10-06T13:16:29.867Z",
       "minimumOrderQuantity": 1
+    },
+    {
+      "id": "prd-1794904587620-dhv",
+      "skuId": "sku-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "categoryId": "cat-1791208230263-4nd",
+      "subcategoryId": "sub-1791208263822-xzv",
+      "variantAttributes": {},
+      "mrp": 0,
+      "name": "BALL 1/4 BHOGAL TEST",
+      "minimumOrderQuantity": 1,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "hsnCode": "",
+      "packSize": "1 Unit",
+      "specifications": "",
+      "status": "Active",
+      "createdAt": "2026-11-17T08:36:27.620Z",
+      "updatedAt": "2026-11-17T08:36:41.432Z"
     }
   ],
   "stock": [
@@ -15968,6 +16026,15 @@
       "lowStockThreshold": 10,
       "updatedBy": "CW-ADMIN",
       "updatedAt": "2026-10-06T13:16:29.867Z"
+    },
+    {
+      "id": "stk-1794904587620-dhv",
+      "productId": "prd-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "quantity": 1,
+      "lowStockThreshold": 10,
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-17T08:36:41.432Z"
     }
   ],
   "prices": [
@@ -20060,6 +20127,16 @@
       "currency": "INR",
       "updatedBy": "CW-ADMIN",
       "updatedAt": "2026-10-06T13:16:29.867Z"
+    },
+    {
+      "id": "prc-1794904587620-dhv",
+      "productId": "prd-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "mrp": 0,
+      "fpPrice": 374,
+      "currency": "INR",
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-17T08:36:41.432Z"
     }
   ],
   "gst": [
@@ -24121,6 +24198,15 @@
       "hsnCode": "",
       "updatedBy": "CW-ADMIN",
       "updatedAt": "2026-10-06T13:16:29.867Z"
+    },
+    {
+      "id": "gst-1794904587620-dhv",
+      "productId": "prd-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "gstPercentage": 12,
+      "hsnCode": "",
+      "updatedBy": "CW-ADMIN",
+      "updatedAt": "2026-11-17T08:36:41.432Z"
     }
   ],
   "orders": [],
@@ -24145,6 +24231,51 @@
     "updatedAt": "2026-10-05T13:47:39.926Z"
   },
   "audit_logs": [
+    {
+      "id": "aud-1794904601432-4vby",
+      "actorUserId": "CW-ADMIN",
+      "actorName": "Cycle World Super Admin",
+      "actorRole": "SUPER_ADMIN",
+      "actionType": "UPDATE_STOCK",
+      "entityType": "PRODUCT",
+      "entityId": "prd-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "fieldChanged": "stock",
+      "previousValue": "0",
+      "newValue": "1",
+      "description": "Updated live stock for SKU CW-MWKFUJJ8-GT1I from 0 to 1.",
+      "createdAt": "2026-11-17T08:36:41.432Z"
+    },
+    {
+      "id": "aud-1794904587620-dq0n",
+      "actorUserId": "CW-ADMIN",
+      "actorName": "Cycle World Super Admin",
+      "actorRole": "SUPER_ADMIN",
+      "actionType": "CREATE_PRODUCT",
+      "entityType": "PRODUCT",
+      "entityId": "prd-1794904587620-dhv",
+      "skuCode": "CW-MWKFUJJ8-GT1I",
+      "fieldChanged": "ALL",
+      "previousValue": "NONE",
+      "newValue": "SKU: CW-MWKFUJJ8-GT1I | Name: BALL 1/4 BHOGAL TEST | MRP: ₹0.00 | FP: ₹374.00 | Stock: 0 | GST: 12%",
+      "description": "Created new product \"BALL 1/4 BHOGAL TEST\" with manually assigned SKU CW-MWKFUJJ8-GT1I.",
+      "createdAt": "2026-11-17T08:36:27.620Z"
+    },
+    {
+      "id": "aud-1794904387267-2g07",
+      "actorUserId": "CW-ADMIN",
+      "actorName": "Cycle World Super Admin",
+      "actorRole": "SUPER_ADMIN",
+      "actionType": "CREATE_CUSTOMER",
+      "entityType": "CUSTOMER",
+      "entityId": "cust-1794904387266-3s5",
+      "skuCode": null,
+      "fieldChanged": "customerCode",
+      "previousValue": "NONE",
+      "newValue": "test3@mail.com - test3",
+      "description": "Created customer login credentials for \"test3\" (Login ID: test3@mail.com).",
+      "createdAt": "2026-11-17T08:33:07.267Z"
+    },
     {
       "id": "aud-1793946779343-tjbl",
       "actorUserId": "CW-ADMIN",
@@ -25599,51 +25730,6 @@
       "newValue": "SKU: TY-015 | Name: TYRE 700*25C RALSON | FP: ₹251.90 | Stock: 0 | GST: 5%",
       "description": "Created new product \"TYRE 700*25C RALSON\" with manually assigned SKU TY-015.",
       "createdAt": "2026-10-05T17:45:47.366Z"
-    },
-    {
-      "id": "aud-1791222346587-m4d9",
-      "actorUserId": "CW-ADMIN",
-      "actorName": "Cycle World Super Admin",
-      "actorRole": "SUPER_ADMIN",
-      "actionType": "CREATE_PRODUCT",
-      "entityType": "PRODUCT",
-      "entityId": "prd-1791222346587-tyv",
-      "skuCode": "TU-005",
-      "fieldChanged": "ALL",
-      "previousValue": "NONE",
-      "newValue": "SKU: TU-005 | Name: TUBE 16*1.75-DV-RALSON | FP: ₹112.70 | Stock: 0 | GST: 5%",
-      "description": "Created new product \"TUBE 16*1.75-DV-RALSON\" with manually assigned SKU TU-005.",
-      "createdAt": "2026-10-05T17:45:46.587Z"
-    },
-    {
-      "id": "aud-1791222345411-56su",
-      "actorUserId": "CW-ADMIN",
-      "actorName": "Cycle World Super Admin",
-      "actorRole": "SUPER_ADMIN",
-      "actionType": "CREATE_PRODUCT",
-      "entityType": "PRODUCT",
-      "entityId": "prd-1791222345410-g89",
-      "skuCode": "TOO-016",
-      "fieldChanged": "ALL",
-      "previousValue": "NONE",
-      "newValue": "SKU: TOO-016 | Name: TOOL-TYRE LEAVER ROD BCP | FP: ₹7.26 | Stock: 0 | GST: 5%",
-      "description": "Created new product \"TOOL-TYRE LEAVER ROD BCP\" with manually assigned SKU TOO-016.",
-      "createdAt": "2026-10-05T17:45:45.411Z"
-    },
-    {
-      "id": "aud-1791222343966-zf0r",
-      "actorUserId": "CW-ADMIN",
-      "actorName": "Cycle World Super Admin",
-      "actorRole": "SUPER_ADMIN",
-      "actionType": "CREATE_PRODUCT",
-      "entityType": "PRODUCT",
-      "entityId": "prd-1791222343966-euv",
-      "skuCode": "TOO-015",
-      "fieldChanged": "ALL",
-      "previousValue": "NONE",
-      "newValue": "SKU: TOO-015 | Name: TOOLS-SPANNER 13H | FP: ₹15.95 | Stock: 0 | GST: 5%",
-      "description": "Created new product \"TOOLS-SPANNER 13H\" with manually assigned SKU TOO-015.",
-      "createdAt": "2026-10-05T17:45:43.966Z"
     }
   ],
   "subcategory_groups": [

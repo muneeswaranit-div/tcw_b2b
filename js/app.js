@@ -7057,32 +7057,10 @@
     },
 
     configureLanServer() {
-      const current = localStorage.getItem('TCW_LAN_SERVER_URL') || 'http://192.168.1.7:8080';
-      const entered = window.prompt(
-        'Enter your Cycle World B2B LAN Server URL (e.g. http://192.168.1.7:8080):',
-        current
+      showToast(
+        'Database access is managed by the Node.js server. Open this portal from its configured server URL.',
+        'info'
       );
-      if (entered && entered.trim()) {
-        const clean = entered.trim().replace(/\/+$/, '');
-        localStorage.setItem('TCW_LAN_SERVER_URL', clean);
-        showToast(`Connecting & syncing with LAN Server (${clean})...`, 'info');
-        fetch(`${clean}/api/db?t=${Date.now()}`, { cache: 'no-store' })
-          .then((res) => {
-            if (!res.ok) throw new Error('HTTP ' + res.status);
-            return res.text();
-          })
-          .then((text) => {
-            const parsed = JSON.parse(text);
-            if (parsed && Array.isArray(parsed.products)) {
-              localStorage.setItem('TCW_ENTERPRISE_RELATIONAL_DB_V2', text);
-              showToast(`Synced ${parsed.products.length} products from LAN Server!`, 'success');
-              window.location.reload();
-            }
-          })
-          .catch(() => {
-            showToast(`Saved LAN URL (${clean}). Using embedded offline database until LAN is reachable.`, 'warning');
-          });
-      }
     },
 
     closeModal() {

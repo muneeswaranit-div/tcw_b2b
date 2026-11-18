@@ -8,7 +8,7 @@
  *  - Super Admin creates all Categories, Subcategories, Products, Manual SKUs,
  *    and Customer Login Credentials from scratch.
  *
- * Implements the 16 normalized relational tables:
+ * Maintains the application data collections persisted by the MySQL server:
  *  1. roles              9. stock
  *  2. users             10. prices
  *  3. customers         11. gst
@@ -23,13 +23,14 @@
 (function (global) {
   'use strict';
 
-  const DB_STORAGE_KEY = 'TCW_B2B_CLEAN_DB_V2';
   const SESSION_STORAGE_KEY = 'TCW_B2B_ACTIVE_SESSION_V2';
   const SYNC_CHANNEL_NAME = 'tcw_b2b_realtime_channel_v2';
   const PASSWORD_SALT = 'TCW_CYCLEWORLD_B2B_SALT_2026::';
 
   // Purge legacy demo storage keys so browser starts 100% clean
   try {
+    localStorage.removeItem('TCW_B2B_CLEAN_DB_V2');
+    localStorage.removeItem('TCW_ENTERPRISE_RELATIONAL_DB_V2');
     localStorage.removeItem('TCW_B2B_RELATIONAL_DB_V1');
     localStorage.removeItem('TCW_B2B_ACTIVE_SESSION_V1');
     localStorage.removeItem('TCW_B2B_ACTIVE_SESSION_V1_CUSTOMER');
@@ -390,137 +391,24 @@
     return db;
   }
 
-  function countCustomImages(db) {
-    if (!db || !Array.isArray(db.products)) return 0;
-    return db.products.filter(
-      (p) => p && p.imageUrl && !String(p.imageUrl).startsWith('data:image/svg+xml')
-    ).length;
-  }
-
-  function mergeServerCompressedImages(targetDb, serverDb) {
-    if (!targetDb || !serverDb || !Array.isArray(targetDb.products) || !Array.isArray(serverDb.products)) {
-      return targetDb;
-    }
-    const serverById = {};
-    const serverBySku = {};
-    serverDb.products.forEach((sp) => {
-      if (!sp) return;
-      if (sp.id) serverById[sp.id] = sp;
-      if (sp.skuCode) serverBySku[String(sp.skuCode).toUpperCase()] = sp;
-    });
-    targetDb.products.forEach((lp) => {
-      if (!lp) return;
-      const sp = serverById[lp.id] || serverBySku[String(lp.skuCode || '').toUpperCase()];
-      if (!sp || !sp.imageUrl || String(sp.imageUrl).startsWith('data:image/svg+xml')) return;
-      if (!lp.imageUrl || String(lp.imageUrl).startsWith('data:image/svg+xml')) {
-        lp.imageUrl = sp.imageUrl;
-      } else if (lp.imageUrl.length > sp.imageUrl.length + 1000) {
-        lp.imageUrl = sp.imageUrl;
-      }
-    });
-    return targetDb;
-  }
-
-  function getConfiguredServerBaseUrls() {
-    const urls = [];
-    try {
-      const savedLan =
-        localStorage.getItem('TCW_LAN_SERVER_URL') || localStorage.getItem('cycleworld_lan_server_url');
-      if (savedLan && savedLan.trim()) {
-        urls.push(savedLan.trim().replace(/\/+$/, ''));
-      }
-    } catch (_e) {}
-    const isHttp =
-      global.location &&
-      typeof global.location.protocol === 'string' &&
-      global.location.protocol.startsWith('http');
-    if (isHttp) {
-      urls.push('');
-    } else {
-      urls.push('http://192.168.1.7:8080');
-      urls.push('http://localhost:8080');
-    }
-    return urls;
-  }
-
   function fetchServerDatabaseSync() {
-    if (typeof XMLHttpRequest === 'undefined') return null;
-    const isHttp =
-      global.location &&
-      typeof global.location.protocol === 'string' &&
-      global.location.protocol.startsWith('http');
-
-    // Only block synchronously when loaded directly from an HTTP server (same origin, <20ms).
-    // When running inside the Android APK (file://), we load instantaneously from localDb / preloaded DB
-    // and then sync asynchronously with the LAN server so the app never freezes if offline.
-    if (!isHttp) {
+    if (typeof XMLHttpRequest === 'undefined' || !global.location ||
+        !global.location.protocol.startsWith('http')) {
       return null;
     }
 
-    try {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', '/api/db?_t=' + Date.now(), false);
-      xhr.send(null);
-      if (xhr.status >= 200 && xhr.status < 300 && xhr.responseText) {
-        const parsed = JSON.parse(xhr.responseText);
-        if (parsed && parsed.meta && parsed.meta.schemaVersion === '2.0.0-clean') {
-          return normalizeDatabaseImages(parsed);
-        }
-      }
-    } catch (e) {}
-    return null;
-  }
-
-  function syncFromLanServerAsync() {
-    if (typeof fetch !== 'function') return;
-    const isHttp =
-      global.location &&
-      typeof global.location.protocol === 'string' &&
-      global.location.protocol.startsWith('http');
-    if (isHttp) return;
-
-    const bases = getConfiguredServerBaseUrls();
-    let idx = 0;
-    function tryNext() {
-      if (idx >= bases.length) return;
-      const base = bases[idx++];
-      fetch(base + '/api/db?_t=' + Date.now())
-        .then((r) => (r.ok ? r.json() : Promise.reject()))
-        .then((parsed) => {
-          if (parsed && parsed.meta && parsed.meta.schemaVersion === '2.0.0-clean') {
-            const normalized = normalizeDatabaseImages(parsed);
-            if (dbState) {
-              mergeServerCompressedImages(normalized, dbState);
-            }
-            dbState = normalized;
-            persistToLocalStorageSafe(dbState);
-            notifyListeners();
-          }
-        })
-        .catch(() => {
-          tryNext();
-        });
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/db?_t=' + Date.now(), false);
+    xhr.send(null);
+    if (xhr.status < 200 || xhr.status >= 300) {
+      throw new Error(`MySQL database request failed (HTTP ${xhr.status}).`);
     }
-    tryNext();
-  }
-
-  function persistToLocalStorageSafe(dbObj) {
-    try {
-      localStorage.setItem(DB_STORAGE_KEY, JSON.stringify(dbObj));
-      return true;
-    } catch (err) {
-      try {
-        if (Array.isArray(dbObj.audit_logs) && dbObj.audit_logs.length > 40) {
-          dbObj.audit_logs = dbObj.audit_logs.slice(0, 40);
-        }
-        normalizeDatabaseImages(dbObj);
-        localStorage.setItem(DB_STORAGE_KEY, JSON.stringify(dbObj));
-        return true;
-      } catch (err2) {
-        console.warn('localStorage quota reached; full database is persisted via /api/sync-db:', err2);
-        return false;
-      }
+    const parsed = JSON.parse(xhr.responseText);
+    if (parsed && parsed.initialized === false) return null;
+    if (!parsed || !parsed.meta || parsed.meta.schemaVersion !== '2.0.0-clean') {
+      throw new Error('The MySQL database contains an unsupported application state.');
     }
+    return normalizeDatabaseImages(parsed);
   }
 
   function compressOversizedDatabaseImagesInBrowser() {
@@ -542,8 +430,7 @@
     function next() {
       if (idx >= oversized.length) {
         if (changed > 0) {
-          persistToLocalStorageSafe(dbState);
-          syncToServerSafe(JSON.stringify(dbState));
+          saveDatabase(false, false);
         }
         return;
       }
@@ -583,81 +470,40 @@
   }
 
   function syncToServerSafe(serializedJson) {
-    if (typeof fetch !== 'function') return;
-    const bases = getConfiguredServerBaseUrls();
-    bases.forEach((base) => {
-      fetch(base + '/api/sync-db', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: serializedJson
-      }).catch(() => {});
-    });
+    if (typeof XMLHttpRequest === 'undefined' || !global.location ||
+        !global.location.protocol.startsWith('http')) {
+      throw new Error('Database changes require opening this application through its Node.js server.');
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/sync-db', false);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(serializedJson);
+    if (xhr.status < 200 || xhr.status >= 300) {
+      let message = `MySQL database save failed (HTTP ${xhr.status}).`;
+      try {
+        const response = JSON.parse(xhr.responseText);
+        if (response.error) message = response.error;
+      } catch (_err) {}
+      throw new Error(message);
+    }
   }
 
-  function loadDatabase(preferServer = false) {
-    let localDb = null;
-    try {
-      const raw = localStorage.getItem(DB_STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (parsed && parsed.meta && parsed.meta.schemaVersion === '2.0.0-clean') {
-          localDb = normalizeDatabaseImages(parsed);
-        }
-      }
-    } catch (err) {
-      console.warn('Database localStorage read fallback:', err);
-    }
-
-    const preloadedDb =
-      global.CYCLEWORLD_PRELOADED_DB &&
-      global.CYCLEWORLD_PRELOADED_DB.meta &&
-      global.CYCLEWORLD_PRELOADED_DB.meta.schemaVersion === '2.0.0-clean'
-        ? normalizeDatabaseImages(JSON.parse(JSON.stringify(global.CYCLEWORLD_PRELOADED_DB)))
-        : null;
-
-    const serverDb = fetchServerDatabaseSync() || preloadedDb;
-    if (serverDb && localDb) {
-      mergeServerCompressedImages(localDb, serverDb);
-    }
-
+  function loadDatabase() {
+    const serverDb = fetchServerDatabaseSync();
     if (serverDb) {
-      const serverTime = (serverDb.meta && serverDb.meta.updatedAt) || '';
-      const localTime = (localDb && localDb.meta && localDb.meta.updatedAt) || '';
-      const serverOptVer = (serverDb.meta && serverDb.meta.imageOptimizationVersion) || 0;
-      const localOptVer = (localDb && localDb.meta && localDb.meta.imageOptimizationVersion) || 0;
-      const serverCustomImgs = countCustomImages(serverDb);
-      const localCustomImgs = countCustomImages(localDb);
-
-      if (
-        !localDb ||
-        preferServer ||
-        serverOptVer > localOptVer ||
-        serverTime >= localTime ||
-        serverCustomImgs > localCustomImgs ||
-        (serverDb.products && localDb.products && serverDb.products.length > localDb.products.length)
-      ) {
-        if (localDb) {
-          mergeServerCompressedImages(serverDb, localDb);
-        }
-        dbState = serverDb;
-        persistToLocalStorageSafe(dbState);
-        compressOversizedDatabaseImagesInBrowser();
-        syncFromLanServerAsync();
-        return dbState;
-      }
+      dbState = serverDb;
+      compressOversizedDatabaseImagesInBrowser();
+      return dbState;
     }
 
-    if (localDb) {
-      dbState = localDb;
-      persistToLocalStorageSafe(dbState);
-      compressOversizedDatabaseImagesInBrowser();
-      syncFromLanServerAsync();
+    if (global.location && global.location.protocol.startsWith('http')) {
+      dbState = buildInitialDatabase();
+      saveDatabase(false, false);
       return dbState;
     }
 
     dbState = buildInitialDatabase();
-    saveDatabase(false);
-    syncFromLanServerAsync();
     return dbState;
   }
 
@@ -666,7 +512,6 @@
     dbState.meta.updatedAt = new Date().toISOString();
     const serialized = JSON.stringify(dbState);
 
-    persistToLocalStorageSafe(dbState);
     syncToServerSafe(serialized);
 
     if (broadcast && syncChannel) {
@@ -700,15 +545,6 @@
       };
     } catch (e) {}
   }
-  if (typeof global.addEventListener === 'function') {
-    global.addEventListener('storage', function (ev) {
-      if (ev.key === DB_STORAGE_KEY) {
-        loadDatabase();
-        notifyListeners();
-      }
-    });
-  }
-
   loadDatabase();
 
   // ============================================================================

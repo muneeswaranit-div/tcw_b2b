@@ -4,14 +4,6 @@ $rootDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 if (-not $rootDir) { $rootDir = 'c:\Users\dkris\OneDrive\Desktop\tcw b2b' }
 $apkOutputPath = Join-Path $rootDir 'CycleWorld-B2B.apk'
 
-Write-Host "Preparing preloaded database for Android APK..." -ForegroundColor Cyan
-$dbFile = Join-Path $rootDir 'database\cycleworld_db.json'
-$preloadedJsFile = Join-Path $rootDir 'js\preloaded-db.js'
-if (Test-Path $dbFile) {
-    $dbRaw = [System.IO.File]::ReadAllText($dbFile, [System.Text.Encoding]::UTF8)
-    [System.IO.File]::WriteAllText($preloadedJsFile, "window.CYCLEWORLD_PRELOADED_DB = $dbRaw;", [System.Text.Encoding]::UTF8)
-}
-
 Add-Type -ReferencedAssemblies @(
     'System.dll',
     'System.Core.dll',
@@ -1356,11 +1348,9 @@ public static class CycleWorldApkBuilder
             "customer.html",
             "billing.html",
             "css/styles.css",
-            "js/preloaded-db.js",
             "js/database-engine.js",
             "js/file-import.js",
-            "js/app.js",
-            "database/cycleworld_db.json"
+            "js/app.js"
         };
 
         foreach (string rel in webFiles)
